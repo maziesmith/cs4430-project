@@ -1,5 +1,5 @@
-﻿namespace PayrollMgmt {
-    partial class Dashboard {
+﻿namespace PayrollMgmt.ChildForms {
+    partial class EmployeeAdd {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -25,15 +25,15 @@
         private void InitializeComponent () {
             this.SuspendLayout();
             // 
-            // Dashboard
+            // EmployeeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
-            this.Text = "Dashboard";
+            this.Name = "EmployeeAdd";
+            this.Text = "Add New Employee";
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PayrollMgmt.ChildForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,18 +11,23 @@ using System.Windows.Forms;
 
 namespace PayrollMgmt {
     public partial class ParentForm : Form {
-        private int childFormNumber = 0;
-
         public ParentForm () {
             InitializeComponent();
+            Dashboard dash = new Dashboard {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
+            dash.Show();
         }
 
         private void ShowNewForm (object sender, EventArgs e) {
-            Dashboard dash = new Dashboard {
-                MdiParent = this,
-                Text = "Window " + childFormNumber++
+            foreach (Form currentForm in MdiChildren)
+                currentForm.Close();
+            EmployeeAdd addEmployee = new EmployeeAdd {
+                MdiParent = this,  
+                WindowState = FormWindowState.Maximized,
             };
-            dash.Show();
+            addEmployee.Show();
         }
 
         private void OpenFile (object sender, EventArgs e) {
