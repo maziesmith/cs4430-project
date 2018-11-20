@@ -8,12 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PayrollMgmt
-{
-    public partial class Dashboard : Form
-    {
-        public Dashboard()
-        {
+namespace PayrollMgmt {
+    public partial class Dashboard : Form {
+        public Dashboard () {
             InitializeComponent();
         }
     }

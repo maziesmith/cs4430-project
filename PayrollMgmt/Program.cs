@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace PayrollMgmt
 {
     static class Program
@@ -16,7 +17,7 @@ namespace PayrollMgmt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+            Application.Run(new ParentForm());
         }
     }
 }
