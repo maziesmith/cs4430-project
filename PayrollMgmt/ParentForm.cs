@@ -13,7 +13,7 @@ namespace PayrollMgmt {
     public partial class ParentForm : Form {
         public ParentForm () {
             InitializeComponent();
-            Dashboard dash = new Dashboard {
+            Dashboard dash = new Dashboard(this) {
                 MdiParent = this,
                 WindowState = FormWindowState.Maximized
             };
@@ -21,11 +21,10 @@ namespace PayrollMgmt {
         }
 
         private void ShowNewForm (object sender, EventArgs e) {
-            foreach (Form currentForm in MdiChildren)
-                currentForm.Close();
+            RemoveChildren();
             EmployeeAdd addEmployee = new EmployeeAdd {
                 MdiParent = this,  
-                WindowState = FormWindowState.Maximized,
+                WindowState = FormWindowState.Maximized
             };
             addEmployee.Show();
         }
@@ -86,9 +85,21 @@ namespace PayrollMgmt {
         }
 
         private void CloseAllToolStripMenuItem_Click (object sender, EventArgs e) {
-            foreach (Form childForm in MdiChildren) {
-                childForm.Close();
-            }
+            RemoveChildren();
+        }
+
+        private void HomeMenuStripItem_Click (object sender, EventArgs e) {
+            RemoveChildren();
+            Dashboard dash = new Dashboard(this) {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
+            dash.Show();
+        }
+
+        public void RemoveChildren () {
+            foreach (Form currentForm in MdiChildren)
+                currentForm.Close();
         }
     }
 }
