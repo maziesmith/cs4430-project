@@ -57,22 +57,22 @@
     <Compile Include="ChildForms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\EmployeeAdd.cs">
+    <Compile Include="ChildForms\EmployeeForms\EmployeeAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\EmployeeAdd.Designer.cs">
+    <Compile Include="ChildForms\EmployeeForms\EmployeeAdd.Designer.cs">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\EmployeeDetails.cs">
+    <Compile Include="ChildForms\EmployeeForms\EmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\EmployeeDetails.Designer.cs">
+    <Compile Include="ChildForms\EmployeeForms\EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\EmployeeTime.cs">
+    <Compile Include="ChildForms\EmployeeForms\EmployeeTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\EmployeeTime.Designer.cs">
+    <Compile Include="ChildForms\EmployeeForms\EmployeeTime.Designer.cs">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
     </Compile>
     <Compile Include="ParentForm.cs">
@@ -86,13 +86,13 @@
     <EmbeddedResource Include="ChildForms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\EmployeeAdd.resx">
+    <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeAdd.resx">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\EmployeeDetails.resx">
+    <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\EmployeeTime.resx">
+    <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeTime.resx">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
