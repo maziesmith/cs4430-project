@@ -17,10 +17,11 @@ namespace PayrollMgmt {
         }
 
         private void ShowNewForm (object sender, EventArgs e) {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Window " + childFormNumber++;
-            childForm.Show();
+            Dashboard dash = new Dashboard {
+                MdiParent = this,
+                Text = "Window " + childFormNumber++
+            };
+            dash.Show();
         }
 
         private void OpenFile (object sender, EventArgs e) {
