@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PayrollMgmt.ChildForms {
     public partial class EmployeeDetails : Form {
-        public EmployeeDetails () {
+        public EmployeeDetails (int id) {
             InitializeComponent();
         }
     }

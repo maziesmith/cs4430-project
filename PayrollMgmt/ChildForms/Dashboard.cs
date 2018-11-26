@@ -28,21 +28,59 @@ namespace PayrollMgmt {
         }
 
         private void TimeEmployee_button_Click (object sender, EventArgs e) {
-            EmployeeTime timeEmployee = new EmployeeTime {
-                MdiParent = this.dashParent,
-                WindowState = FormWindowState.Maximized
-            };
-            timeEmployee.Show();
-            this.Close();
+            try {
+                EmployeeTime timeEmployee = new EmployeeTime(Int32.Parse(this.employeeTimeID.Text)) {
+                    MdiParent = this.dashParent,
+                    WindowState = FormWindowState.Maximized
+                };
+                timeEmployee.Show();
+                this.Close();
+            } catch (FormatException) {
+                MessageBox.Show(
+                    "This field only accepts integers! \nPlease reenter a valid employee ID",
+                    "Format Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private void ViewEmployee_button_Click (object sender, EventArgs e) {
-            EmployeeDetails detailsEmployee = new EmployeeDetails {
-                MdiParent = this.dashParent,
-                WindowState = FormWindowState.Maximized
-            };
-            detailsEmployee.Show();
-            this.Close();
+            try {
+                EmployeeDetails detailsEmployee = new EmployeeDetails(Int32.Parse(this.employeeDetailsID.Text)) {
+                    MdiParent = this.dashParent,
+                    WindowState = FormWindowState.Maximized
+                };
+                detailsEmployee.Show();
+                this.Close();
+            } catch(FormatException){
+                MessageBox.Show(
+                    "This field only accepts integers! \nPlease reenter a valid employee ID", 
+                    "Format Error", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void EmployeeID_Enter(object sender, EventArgs e) {
+            TextBox currentSender = null;
+            if (sender is TextBox) {
+                currentSender = (TextBox)sender;
+                if (currentSender.Text == "Employee ID"){
+                    currentSender.Text = "";
+                    currentSender.ForeColor = Color.Black;
+                }
+            }
+        }
+
+        private void EmployeeID_Leave(object sender, EventArgs e) {
+            TextBox currentSender = null;
+            if (sender is TextBox) {
+                currentSender = (TextBox)sender;
+                if (currentSender.Text == "") {
+                    currentSender.Text = "Employee ID";
+                    currentSender.ForeColor = Color.Gray;
+                }
+            }
         }
     }
 }
