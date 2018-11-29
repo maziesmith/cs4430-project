@@ -139,6 +139,7 @@
             this.AddEmployee_button.TabIndex = 0;
             this.AddEmployee_button.Text = "Add";
             this.AddEmployee_button.UseVisualStyleBackColor = true;
+            this.AddEmployee_button.Click += new System.EventHandler(this.AddEmployee_button_Click);
             // 
             // TimeEmployee_button
             // 
@@ -149,6 +150,7 @@
             this.TimeEmployee_button.TabIndex = 1;
             this.TimeEmployee_button.Text = "Submit";
             this.TimeEmployee_button.UseVisualStyleBackColor = true;
+            this.TimeEmployee_button.Click += new System.EventHandler(this.TimeEmployee_button_Click);
             // 
             // ViewEmployee_button
             // 
@@ -159,6 +161,7 @@
             this.ViewEmployee_button.TabIndex = 2;
             this.ViewEmployee_button.Text = "Submit";
             this.ViewEmployee_button.UseVisualStyleBackColor = true;
+            this.ViewEmployee_button.Click += new System.EventHandler(this.ViewEmployee_button_Click);
             // 
             // addLabel
             // 
@@ -199,6 +202,8 @@
             this.employeeTimeID.Size = new System.Drawing.Size(263, 20);
             this.employeeTimeID.TabIndex = 7;
             this.employeeTimeID.Text = "Employee ID";
+            this.employeeTimeID.Enter += new System.EventHandler(this.EmployeeID_Enter);
+            this.employeeTimeID.Leave += new System.EventHandler(this.EmployeeID_Leave);
             // 
             // employeeDetailsID
             // 
@@ -209,6 +214,8 @@
             this.employeeDetailsID.Size = new System.Drawing.Size(263, 20);
             this.employeeDetailsID.TabIndex = 6;
             this.employeeDetailsID.Text = "Employee ID";
+            this.employeeDetailsID.Enter += new System.EventHandler(this.EmployeeID_Enter);
+            this.employeeDetailsID.Leave += new System.EventHandler(this.EmployeeID_Leave);
             // 
             // JobsAndDeptGroup
             // 
