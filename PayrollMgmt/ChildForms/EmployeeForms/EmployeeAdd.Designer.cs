@@ -27,7 +27,7 @@
             this.DetailsGroup = new System.Windows.Forms.GroupBox();
             this.PersonalTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.JobGroup = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.NameTablecontainer = new System.Windows.Forms.TableLayoutPanel();
             this.ParentTableContainer.SuspendLayout();
             this.DetailsGroup.SuspendLayout();
             this.PersonalTableContainer.SuspendLayout();
@@ -63,7 +63,7 @@
             // 
             this.PersonalTableContainer.ColumnCount = 1;
             this.PersonalTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.PersonalTableContainer.Controls.Add(this.NameTablecontainer, 0, 0);
             this.PersonalTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PersonalTableContainer.Location = new System.Drawing.Point(3, 16);
             this.PersonalTableContainer.Name = "PersonalTableContainer";
@@ -88,19 +88,19 @@
             this.JobGroup.TabStop = false;
             this.JobGroup.Text = "Job Details";
             // 
-            // tableLayoutPanel3
+            // NameTablecontainer
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.03704F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.96296F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(382, 54);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.NameTablecontainer.ColumnCount = 2;
+            this.NameTablecontainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.NameTablecontainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.NameTablecontainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NameTablecontainer.Location = new System.Drawing.Point(3, 3);
+            this.NameTablecontainer.Name = "NameTablecontainer";
+            this.NameTablecontainer.RowCount = 2;
+            this.NameTablecontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.03704F));
+            this.NameTablecontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.96296F));
+            this.NameTablecontainer.Size = new System.Drawing.Size(382, 54);
+            this.NameTablecontainer.TabIndex = 0;
             // 
             // EmployeeAdd
             // 
@@ -123,7 +123,7 @@
         private System.Windows.Forms.TableLayoutPanel ParentTableContainer;
         private System.Windows.Forms.GroupBox DetailsGroup;
         private System.Windows.Forms.TableLayoutPanel PersonalTableContainer;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel NameTablecontainer;
         private System.Windows.Forms.GroupBox JobGroup;
     }
 }
