@@ -12,6 +12,7 @@ namespace PayrollMgmt.ChildForms {
     public partial class EmployeeAdd : Form {
         public EmployeeAdd () {
             InitializeComponent();
+            PayrollDatabase dbconn = PayrollDatabase.Instance;
         }
     }
 }

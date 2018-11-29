@@ -75,6 +75,7 @@
     <Compile Include="ChildForms\EmployeeForms\EmployeeTime.Designer.cs">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\PayrollDatabase.cs" />
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
     </Compile>
