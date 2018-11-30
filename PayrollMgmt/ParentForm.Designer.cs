@@ -402,10 +402,10 @@
             // toolStrip
             // 
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripButton,
-            this.toolStripButton1,
+            this.helpToolStripButton,
             this.toolStripSeparator1,
-            this.helpToolStripButton});
+            this.newToolStripButton,
+            this.toolStripButton1});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(805, 25);

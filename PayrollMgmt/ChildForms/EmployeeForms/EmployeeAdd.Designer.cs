@@ -323,6 +323,7 @@
             this.ZipInput.Name = "ZipInput";
             this.ZipInput.Size = new System.Drawing.Size(376, 20);
             this.ZipInput.TabIndex = 1;
+            this.ZipInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PhoneTableContainer
             // 
@@ -346,6 +347,7 @@
             this.PhoneInput.Name = "PhoneInput";
             this.PhoneInput.Size = new System.Drawing.Size(376, 20);
             this.PhoneInput.TabIndex = 2;
+            this.PhoneInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PhoneLabel
             // 
