@@ -131,8 +131,6 @@
             this.DeptInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.DeptInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DeptInput.FormattingEnabled = true;
-            this.DeptInput.Items.AddRange(new object[] {
-            "Information Technology"});
             this.DeptInput.Location = new System.Drawing.Point(3, 31);
             this.DeptInput.Name = "DeptInput";
             this.DeptInput.Size = new System.Drawing.Size(263, 21);

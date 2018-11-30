@@ -23,6 +23,8 @@ namespace PayrollMgmt {
             if((dbConn = PayrollDatabase.Instance) != null) {
                 dashParent.StatusUpdate = "Connected to database successfully!";
             }
+
+            DeptInput.Items.Add(new ComboBoxItem("Information Technology", 1));
         }
 
         private void AddEmployee_button_Click (object sender, EventArgs e) {

@@ -31,37 +31,57 @@
             this.FnameInput = new System.Windows.Forms.TextBox();
             this.FnamLabel = new System.Windows.Forms.Label();
             this.LnameLabel = new System.Windows.Forms.Label();
-            this.JobGroup = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.StreetTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.StreetLabel = new System.Windows.Forms.Label();
-            this.CityLabel = new System.Windows.Forms.Label();
-            this.StateLabel = new System.Windows.Forms.Label();
-            this.ZipLabel = new System.Windows.Forms.Label();
-            this.PhoneLabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.StreetInput = new System.Windows.Forms.TextBox();
+            this.CityTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.CityInput = new System.Windows.Forms.TextBox();
+            this.CityLabel = new System.Windows.Forms.Label();
+            this.StateTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.StateLabel = new System.Windows.Forms.Label();
             this.StateInput = new System.Windows.Forms.ComboBox();
+            this.ZipTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.ZipLabel = new System.Windows.Forms.Label();
             this.ZipInput = new System.Windows.Forms.NumericUpDown();
+            this.PhoneTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.PhoneInput = new System.Windows.Forms.NumericUpDown();
-            this.DateInput = new System.Windows.Forms.DateTimePicker();
+            this.PhoneLabel = new System.Windows.Forms.Label();
+            this.HireDateTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.HireDateLabel = new System.Windows.Forms.Label();
+            this.HireDateInput = new System.Windows.Forms.DateTimePicker();
+            this.JobGroup = new System.Windows.Forms.GroupBox();
+            this.JobDetailsTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.BonusTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.DeductionTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.HoldiayTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.JobTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.HolidayInput = new System.Windows.Forms.ComboBox();
+            this.DeductionInput = new System.Windows.Forms.ComboBox();
+            this.BonusInput = new System.Windows.Forms.ComboBox();
+            this.JobInput = new System.Windows.Forms.ComboBox();
+            this.JobLabel = new System.Windows.Forms.Label();
+            this.DeductionLabel = new System.Windows.Forms.Label();
+            this.BonusLabel = new System.Windows.Forms.Label();
+            this.HolidayLabel = new System.Windows.Forms.Label();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.ParentTableContainer.SuspendLayout();
             this.DetailsGroup.SuspendLayout();
             this.PersonalTableContainer.SuspendLayout();
             this.NameTablecontainer.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
+            this.StreetTableContainer.SuspendLayout();
+            this.CityTableContainer.SuspendLayout();
+            this.StateTableContainer.SuspendLayout();
+            this.ZipTableContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZipInput)).BeginInit();
+            this.PhoneTableContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneInput)).BeginInit();
+            this.HireDateTableContainer.SuspendLayout();
+            this.JobGroup.SuspendLayout();
+            this.JobDetailsTableContainer.SuspendLayout();
+            this.BonusTableContainer.SuspendLayout();
+            this.DeductionTableContainer.SuspendLayout();
+            this.HoldiayTableContainer.SuspendLayout();
+            this.JobTableContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // ParentTableContainer
@@ -95,12 +115,12 @@
             this.PersonalTableContainer.ColumnCount = 1;
             this.PersonalTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.PersonalTableContainer.Controls.Add(this.NameTablecontainer, 0, 0);
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel1, 0, 1);
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel3, 0, 3);
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel4, 0, 4);
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel5, 0, 5);
-            this.PersonalTableContainer.Controls.Add(this.tableLayoutPanel6, 0, 6);
+            this.PersonalTableContainer.Controls.Add(this.StreetTableContainer, 0, 1);
+            this.PersonalTableContainer.Controls.Add(this.CityTableContainer, 0, 2);
+            this.PersonalTableContainer.Controls.Add(this.StateTableContainer, 0, 3);
+            this.PersonalTableContainer.Controls.Add(this.ZipTableContainer, 0, 4);
+            this.PersonalTableContainer.Controls.Add(this.PhoneTableContainer, 0, 5);
+            this.PersonalTableContainer.Controls.Add(this.HireDateTableContainer, 0, 6);
             this.PersonalTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PersonalTableContainer.Location = new System.Drawing.Point(3, 16);
             this.PersonalTableContainer.Name = "PersonalTableContainer";
@@ -136,22 +156,20 @@
             // LnameInput
             // 
             this.LnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LnameInput.ForeColor = System.Drawing.Color.Gray;
+            this.LnameInput.ForeColor = System.Drawing.SystemColors.InfoText;
             this.LnameInput.Location = new System.Drawing.Point(3, 27);
             this.LnameInput.Name = "LnameInput";
             this.LnameInput.Size = new System.Drawing.Size(185, 20);
             this.LnameInput.TabIndex = 0;
-            this.LnameInput.Text = "First Name";
             // 
             // FnameInput
             // 
             this.FnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FnameInput.ForeColor = System.Drawing.Color.Gray;
+            this.FnameInput.ForeColor = System.Drawing.SystemColors.InfoText;
             this.FnameInput.Location = new System.Drawing.Point(194, 27);
             this.FnameInput.Name = "FnameInput";
             this.FnameInput.Size = new System.Drawing.Size(185, 20);
             this.FnameInput.TabIndex = 1;
-            this.FnameInput.Text = "Last Name";
             // 
             // FnamLabel
             // 
@@ -173,105 +191,20 @@
             this.LnameLabel.TabIndex = 3;
             this.LnameLabel.Text = "Last Name";
             // 
-            // JobGroup
+            // StreetTableContainer
             // 
-            this.JobGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.JobGroup.Location = new System.Drawing.Point(403, 3);
-            this.JobGroup.Name = "JobGroup";
-            this.JobGroup.Size = new System.Drawing.Size(394, 444);
-            this.JobGroup.TabIndex = 1;
-            this.JobGroup.TabStop = false;
-            this.JobGroup.Text = "Job Details";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.StreetLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.StreetInput, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 63);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 54);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.CityInput, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.CityLabel, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 123);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(382, 54);
-            this.tableLayoutPanel2.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.StateLabel, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.StateInput, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 183);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(382, 54);
-            this.tableLayoutPanel3.TabIndex = 3;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Controls.Add(this.ZipLabel, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.ZipInput, 0, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 243);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(382, 54);
-            this.tableLayoutPanel4.TabIndex = 4;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.PhoneInput, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.PhoneLabel, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 303);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(382, 54);
-            this.tableLayoutPanel5.TabIndex = 5;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.DateInput, 0, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 363);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(382, 59);
-            this.tableLayoutPanel6.TabIndex = 6;
+            this.StreetTableContainer.ColumnCount = 1;
+            this.StreetTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.StreetTableContainer.Controls.Add(this.StreetLabel, 0, 0);
+            this.StreetTableContainer.Controls.Add(this.StreetInput, 0, 1);
+            this.StreetTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StreetTableContainer.Location = new System.Drawing.Point(3, 63);
+            this.StreetTableContainer.Name = "StreetTableContainer";
+            this.StreetTableContainer.RowCount = 2;
+            this.StreetTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.StreetTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.StreetTableContainer.Size = new System.Drawing.Size(382, 54);
+            this.StreetTableContainer.TabIndex = 1;
             // 
             // StreetLabel
             // 
@@ -283,6 +216,37 @@
             this.StreetLabel.TabIndex = 0;
             this.StreetLabel.Text = "Street";
             // 
+            // StreetInput
+            // 
+            this.StreetInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.StreetInput.Location = new System.Drawing.Point(3, 25);
+            this.StreetInput.Name = "StreetInput";
+            this.StreetInput.Size = new System.Drawing.Size(376, 20);
+            this.StreetInput.TabIndex = 1;
+            // 
+            // CityTableContainer
+            // 
+            this.CityTableContainer.ColumnCount = 1;
+            this.CityTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.CityTableContainer.Controls.Add(this.CityInput, 0, 1);
+            this.CityTableContainer.Controls.Add(this.CityLabel, 0, 0);
+            this.CityTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CityTableContainer.Location = new System.Drawing.Point(3, 123);
+            this.CityTableContainer.Name = "CityTableContainer";
+            this.CityTableContainer.RowCount = 2;
+            this.CityTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.CityTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.CityTableContainer.Size = new System.Drawing.Size(382, 54);
+            this.CityTableContainer.TabIndex = 2;
+            // 
+            // CityInput
+            // 
+            this.CityInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CityInput.Location = new System.Drawing.Point(3, 25);
+            this.CityInput.Name = "CityInput";
+            this.CityInput.Size = new System.Drawing.Size(376, 20);
+            this.CityInput.TabIndex = 2;
+            // 
             // CityLabel
             // 
             this.CityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -292,6 +256,21 @@
             this.CityLabel.Size = new System.Drawing.Size(24, 13);
             this.CityLabel.TabIndex = 0;
             this.CityLabel.Text = "City";
+            // 
+            // StateTableContainer
+            // 
+            this.StateTableContainer.ColumnCount = 1;
+            this.StateTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.StateTableContainer.Controls.Add(this.StateLabel, 0, 0);
+            this.StateTableContainer.Controls.Add(this.StateInput, 0, 1);
+            this.StateTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StateTableContainer.Location = new System.Drawing.Point(3, 183);
+            this.StateTableContainer.Name = "StateTableContainer";
+            this.StateTableContainer.RowCount = 2;
+            this.StateTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.StateTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.StateTableContainer.Size = new System.Drawing.Size(382, 54);
+            this.StateTableContainer.TabIndex = 3;
             // 
             // StateLabel
             // 
@@ -303,6 +282,30 @@
             this.StateLabel.TabIndex = 0;
             this.StateLabel.Text = "State";
             // 
+            // StateInput
+            // 
+            this.StateInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.StateInput.FormattingEnabled = true;
+            this.StateInput.Location = new System.Drawing.Point(3, 24);
+            this.StateInput.Name = "StateInput";
+            this.StateInput.Size = new System.Drawing.Size(376, 21);
+            this.StateInput.TabIndex = 1;
+            // 
+            // ZipTableContainer
+            // 
+            this.ZipTableContainer.ColumnCount = 1;
+            this.ZipTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ZipTableContainer.Controls.Add(this.ZipLabel, 0, 0);
+            this.ZipTableContainer.Controls.Add(this.ZipInput, 0, 1);
+            this.ZipTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ZipTableContainer.Location = new System.Drawing.Point(3, 243);
+            this.ZipTableContainer.Name = "ZipTableContainer";
+            this.ZipTableContainer.RowCount = 2;
+            this.ZipTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.ZipTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.ZipTableContainer.Size = new System.Drawing.Size(382, 54);
+            this.ZipTableContainer.TabIndex = 4;
+            // 
             // ZipLabel
             // 
             this.ZipLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -312,6 +315,37 @@
             this.ZipLabel.Size = new System.Drawing.Size(24, 13);
             this.ZipLabel.TabIndex = 0;
             this.ZipLabel.Text = "ZIP";
+            // 
+            // ZipInput
+            // 
+            this.ZipInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ZipInput.Location = new System.Drawing.Point(3, 25);
+            this.ZipInput.Name = "ZipInput";
+            this.ZipInput.Size = new System.Drawing.Size(376, 20);
+            this.ZipInput.TabIndex = 1;
+            // 
+            // PhoneTableContainer
+            // 
+            this.PhoneTableContainer.ColumnCount = 1;
+            this.PhoneTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PhoneTableContainer.Controls.Add(this.PhoneInput, 0, 1);
+            this.PhoneTableContainer.Controls.Add(this.PhoneLabel, 0, 0);
+            this.PhoneTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PhoneTableContainer.Location = new System.Drawing.Point(3, 303);
+            this.PhoneTableContainer.Name = "PhoneTableContainer";
+            this.PhoneTableContainer.RowCount = 2;
+            this.PhoneTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.PhoneTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.PhoneTableContainer.Size = new System.Drawing.Size(382, 54);
+            this.PhoneTableContainer.TabIndex = 5;
+            // 
+            // PhoneInput
+            // 
+            this.PhoneInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhoneInput.Location = new System.Drawing.Point(3, 25);
+            this.PhoneInput.Name = "PhoneInput";
+            this.PhoneInput.Size = new System.Drawing.Size(376, 20);
+            this.PhoneInput.TabIndex = 2;
             // 
             // PhoneLabel
             // 
@@ -323,64 +357,218 @@
             this.PhoneLabel.TabIndex = 0;
             this.PhoneLabel.Text = "Phone Number";
             // 
-            // label6
+            // HireDateTableContainer
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Hire Date";
+            this.HireDateTableContainer.ColumnCount = 1;
+            this.HireDateTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.HireDateTableContainer.Controls.Add(this.HireDateLabel, 0, 0);
+            this.HireDateTableContainer.Controls.Add(this.HireDateInput, 0, 1);
+            this.HireDateTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HireDateTableContainer.Location = new System.Drawing.Point(3, 363);
+            this.HireDateTableContainer.Name = "HireDateTableContainer";
+            this.HireDateTableContainer.RowCount = 2;
+            this.HireDateTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.HireDateTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.HireDateTableContainer.Size = new System.Drawing.Size(382, 59);
+            this.HireDateTableContainer.TabIndex = 6;
             // 
-            // StreetInput
+            // HireDateLabel
             // 
-            this.StreetInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.StreetInput.Location = new System.Drawing.Point(3, 25);
-            this.StreetInput.Name = "StreetInput";
-            this.StreetInput.Size = new System.Drawing.Size(376, 20);
-            this.StreetInput.TabIndex = 1;
+            this.HireDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.HireDateLabel.AutoSize = true;
+            this.HireDateLabel.Location = new System.Drawing.Point(3, 4);
+            this.HireDateLabel.Name = "HireDateLabel";
+            this.HireDateLabel.Size = new System.Drawing.Size(52, 13);
+            this.HireDateLabel.TabIndex = 0;
+            this.HireDateLabel.Text = "Hire Date";
             // 
-            // CityInput
+            // HireDateInput
             // 
-            this.CityInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CityInput.Location = new System.Drawing.Point(3, 25);
-            this.CityInput.Name = "CityInput";
-            this.CityInput.Size = new System.Drawing.Size(376, 20);
-            this.CityInput.TabIndex = 2;
+            this.HireDateInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HireDateInput.Location = new System.Drawing.Point(3, 28);
+            this.HireDateInput.Name = "HireDateInput";
+            this.HireDateInput.Size = new System.Drawing.Size(376, 20);
+            this.HireDateInput.TabIndex = 1;
             // 
-            // StateInput
+            // JobGroup
             // 
-            this.StateInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.StateInput.FormattingEnabled = true;
-            this.StateInput.Location = new System.Drawing.Point(3, 24);
-            this.StateInput.Name = "StateInput";
-            this.StateInput.Size = new System.Drawing.Size(376, 21);
-            this.StateInput.TabIndex = 1;
+            this.JobGroup.Controls.Add(this.JobDetailsTableContainer);
+            this.JobGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobGroup.Location = new System.Drawing.Point(403, 3);
+            this.JobGroup.Name = "JobGroup";
+            this.JobGroup.Size = new System.Drawing.Size(394, 444);
+            this.JobGroup.TabIndex = 1;
+            this.JobGroup.TabStop = false;
+            this.JobGroup.Text = "Job Details";
             // 
-            // ZipInput
+            // JobDetailsTableContainer
             // 
-            this.ZipInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ZipInput.Location = new System.Drawing.Point(3, 25);
-            this.ZipInput.Name = "ZipInput";
-            this.ZipInput.Size = new System.Drawing.Size(376, 20);
-            this.ZipInput.TabIndex = 1;
+            this.JobDetailsTableContainer.ColumnCount = 1;
+            this.JobDetailsTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.JobDetailsTableContainer.Controls.Add(this.BonusTableContainer, 0, 3);
+            this.JobDetailsTableContainer.Controls.Add(this.DeductionTableContainer, 0, 2);
+            this.JobDetailsTableContainer.Controls.Add(this.HoldiayTableContainer, 0, 1);
+            this.JobDetailsTableContainer.Controls.Add(this.JobTableContainer, 0, 0);
+            this.JobDetailsTableContainer.Controls.Add(this.SubmitButton, 0, 4);
+            this.JobDetailsTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobDetailsTableContainer.Location = new System.Drawing.Point(3, 16);
+            this.JobDetailsTableContainer.Name = "JobDetailsTableContainer";
+            this.JobDetailsTableContainer.RowCount = 5;
+            this.JobDetailsTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.JobDetailsTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.JobDetailsTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.JobDetailsTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.JobDetailsTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.JobDetailsTableContainer.Size = new System.Drawing.Size(388, 425);
+            this.JobDetailsTableContainer.TabIndex = 0;
             // 
-            // PhoneInput
+            // BonusTableContainer
             // 
-            this.PhoneInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneInput.Location = new System.Drawing.Point(3, 25);
-            this.PhoneInput.Name = "PhoneInput";
-            this.PhoneInput.Size = new System.Drawing.Size(376, 20);
-            this.PhoneInput.TabIndex = 2;
+            this.BonusTableContainer.ColumnCount = 1;
+            this.BonusTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.BonusTableContainer.Controls.Add(this.BonusLabel, 0, 0);
+            this.BonusTableContainer.Controls.Add(this.BonusInput, 0, 1);
+            this.BonusTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BonusTableContainer.Location = new System.Drawing.Point(3, 255);
+            this.BonusTableContainer.Name = "BonusTableContainer";
+            this.BonusTableContainer.RowCount = 2;
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.BonusTableContainer.Size = new System.Drawing.Size(382, 78);
+            this.BonusTableContainer.TabIndex = 3;
             // 
-            // DateInput
+            // DeductionTableContainer
             // 
-            this.DateInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DateInput.Location = new System.Drawing.Point(3, 28);
-            this.DateInput.Name = "DateInput";
-            this.DateInput.Size = new System.Drawing.Size(376, 20);
-            this.DateInput.TabIndex = 1;
+            this.DeductionTableContainer.ColumnCount = 1;
+            this.DeductionTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.DeductionTableContainer.Controls.Add(this.DeductionLabel, 0, 0);
+            this.DeductionTableContainer.Controls.Add(this.DeductionInput, 0, 1);
+            this.DeductionTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeductionTableContainer.Location = new System.Drawing.Point(3, 171);
+            this.DeductionTableContainer.Name = "DeductionTableContainer";
+            this.DeductionTableContainer.RowCount = 2;
+            this.DeductionTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.DeductionTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.DeductionTableContainer.Size = new System.Drawing.Size(382, 78);
+            this.DeductionTableContainer.TabIndex = 2;
+            // 
+            // HoldiayTableContainer
+            // 
+            this.HoldiayTableContainer.ColumnCount = 1;
+            this.HoldiayTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.HoldiayTableContainer.Controls.Add(this.HolidayLabel, 0, 0);
+            this.HoldiayTableContainer.Controls.Add(this.HolidayInput, 0, 1);
+            this.HoldiayTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HoldiayTableContainer.Location = new System.Drawing.Point(3, 87);
+            this.HoldiayTableContainer.Name = "HoldiayTableContainer";
+            this.HoldiayTableContainer.RowCount = 2;
+            this.HoldiayTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.HoldiayTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.HoldiayTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.HoldiayTableContainer.Size = new System.Drawing.Size(382, 78);
+            this.HoldiayTableContainer.TabIndex = 1;
+            // 
+            // JobTableContainer
+            // 
+            this.JobTableContainer.ColumnCount = 1;
+            this.JobTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.JobTableContainer.Controls.Add(this.JobInput, 0, 1);
+            this.JobTableContainer.Controls.Add(this.JobLabel, 0, 0);
+            this.JobTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobTableContainer.Location = new System.Drawing.Point(3, 3);
+            this.JobTableContainer.Name = "JobTableContainer";
+            this.JobTableContainer.RowCount = 2;
+            this.JobTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.JobTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.JobTableContainer.Size = new System.Drawing.Size(382, 78);
+            this.JobTableContainer.TabIndex = 0;
+            // 
+            // HolidayInput
+            // 
+            this.HolidayInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HolidayInput.FormattingEnabled = true;
+            this.HolidayInput.Location = new System.Drawing.Point(3, 40);
+            this.HolidayInput.Name = "HolidayInput";
+            this.HolidayInput.Size = new System.Drawing.Size(376, 21);
+            this.HolidayInput.TabIndex = 1;
+            // 
+            // DeductionInput
+            // 
+            this.DeductionInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeductionInput.FormattingEnabled = true;
+            this.DeductionInput.Location = new System.Drawing.Point(3, 40);
+            this.DeductionInput.Name = "DeductionInput";
+            this.DeductionInput.Size = new System.Drawing.Size(376, 21);
+            this.DeductionInput.TabIndex = 1;
+            // 
+            // BonusInput
+            // 
+            this.BonusInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BonusInput.FormattingEnabled = true;
+            this.BonusInput.Location = new System.Drawing.Point(3, 40);
+            this.BonusInput.Name = "BonusInput";
+            this.BonusInput.Size = new System.Drawing.Size(376, 21);
+            this.BonusInput.TabIndex = 1;
+            // 
+            // JobInput
+            // 
+            this.JobInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.JobInput.FormattingEnabled = true;
+            this.JobInput.Location = new System.Drawing.Point(3, 40);
+            this.JobInput.Name = "JobInput";
+            this.JobInput.Size = new System.Drawing.Size(376, 21);
+            this.JobInput.TabIndex = 0;
+            // 
+            // JobLabel
+            // 
+            this.JobLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.JobLabel.AutoSize = true;
+            this.JobLabel.Location = new System.Drawing.Point(3, 10);
+            this.JobLabel.Name = "JobLabel";
+            this.JobLabel.Size = new System.Drawing.Size(44, 13);
+            this.JobLabel.TabIndex = 1;
+            this.JobLabel.Text = "Position";
+            // 
+            // DeductionLabel
+            // 
+            this.DeductionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeductionLabel.AutoSize = true;
+            this.DeductionLabel.Location = new System.Drawing.Point(3, 10);
+            this.DeductionLabel.Name = "DeductionLabel";
+            this.DeductionLabel.Size = new System.Drawing.Size(61, 13);
+            this.DeductionLabel.TabIndex = 2;
+            this.DeductionLabel.Text = "Deductions";
+            // 
+            // BonusLabel
+            // 
+            this.BonusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BonusLabel.AutoSize = true;
+            this.BonusLabel.Location = new System.Drawing.Point(3, 10);
+            this.BonusLabel.Name = "BonusLabel";
+            this.BonusLabel.Size = new System.Drawing.Size(48, 13);
+            this.BonusLabel.TabIndex = 4;
+            this.BonusLabel.Text = "Bonuses";
+            // 
+            // HolidayLabel
+            // 
+            this.HolidayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.HolidayLabel.AutoSize = true;
+            this.HolidayLabel.Location = new System.Drawing.Point(3, 10);
+            this.HolidayLabel.Name = "HolidayLabel";
+            this.HolidayLabel.Size = new System.Drawing.Size(47, 13);
+            this.HolidayLabel.TabIndex = 2;
+            this.HolidayLabel.Text = "Holidays";
+            // 
+            // SubmitButton
+            // 
+            this.SubmitButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SubmitButton.Location = new System.Drawing.Point(151, 369);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(86, 23);
+            this.SubmitButton.TabIndex = 4;
+            this.SubmitButton.Text = "Add Employee";
+            this.SubmitButton.UseVisualStyleBackColor = true;
             // 
             // EmployeeAdd
             // 
@@ -396,20 +584,30 @@
             this.PersonalTableContainer.ResumeLayout(false);
             this.NameTablecontainer.ResumeLayout(false);
             this.NameTablecontainer.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel6.PerformLayout();
+            this.StreetTableContainer.ResumeLayout(false);
+            this.StreetTableContainer.PerformLayout();
+            this.CityTableContainer.ResumeLayout(false);
+            this.CityTableContainer.PerformLayout();
+            this.StateTableContainer.ResumeLayout(false);
+            this.StateTableContainer.PerformLayout();
+            this.ZipTableContainer.ResumeLayout(false);
+            this.ZipTableContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZipInput)).EndInit();
+            this.PhoneTableContainer.ResumeLayout(false);
+            this.PhoneTableContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneInput)).EndInit();
+            this.HireDateTableContainer.ResumeLayout(false);
+            this.HireDateTableContainer.PerformLayout();
+            this.JobGroup.ResumeLayout(false);
+            this.JobDetailsTableContainer.ResumeLayout(false);
+            this.BonusTableContainer.ResumeLayout(false);
+            this.BonusTableContainer.PerformLayout();
+            this.DeductionTableContainer.ResumeLayout(false);
+            this.DeductionTableContainer.PerformLayout();
+            this.HoldiayTableContainer.ResumeLayout(false);
+            this.HoldiayTableContainer.PerformLayout();
+            this.JobTableContainer.ResumeLayout(false);
+            this.JobTableContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -425,23 +623,37 @@
         private System.Windows.Forms.TextBox FnameInput;
         private System.Windows.Forms.Label FnamLabel;
         private System.Windows.Forms.Label LnameLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel StreetTableContainer;
         private System.Windows.Forms.Label StreetLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel CityTableContainer;
         private System.Windows.Forms.Label CityLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel StateTableContainer;
         private System.Windows.Forms.Label StateLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel ZipTableContainer;
         private System.Windows.Forms.Label ZipLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel PhoneTableContainer;
         private System.Windows.Forms.Label PhoneLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel HireDateTableContainer;
+        private System.Windows.Forms.Label HireDateLabel;
         private System.Windows.Forms.TextBox StreetInput;
         private System.Windows.Forms.TextBox CityInput;
         private System.Windows.Forms.ComboBox StateInput;
         private System.Windows.Forms.NumericUpDown ZipInput;
         private System.Windows.Forms.NumericUpDown PhoneInput;
-        private System.Windows.Forms.DateTimePicker DateInput;
+        private System.Windows.Forms.DateTimePicker HireDateInput;
+        private System.Windows.Forms.TableLayoutPanel JobDetailsTableContainer;
+        private System.Windows.Forms.TableLayoutPanel BonusTableContainer;
+        private System.Windows.Forms.TableLayoutPanel DeductionTableContainer;
+        private System.Windows.Forms.TableLayoutPanel HoldiayTableContainer;
+        private System.Windows.Forms.TableLayoutPanel JobTableContainer;
+        private System.Windows.Forms.Label BonusLabel;
+        private System.Windows.Forms.ComboBox BonusInput;
+        private System.Windows.Forms.Label DeductionLabel;
+        private System.Windows.Forms.ComboBox DeductionInput;
+        private System.Windows.Forms.ComboBox HolidayInput;
+        private System.Windows.Forms.ComboBox JobInput;
+        private System.Windows.Forms.Label JobLabel;
+        private System.Windows.Forms.Label HolidayLabel;
+        private System.Windows.Forms.Button SubmitButton;
     }
 }
