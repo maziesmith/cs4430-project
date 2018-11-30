@@ -22,7 +22,7 @@ namespace PayrollMgmt {
 
         private void ShowNewForm (object sender, EventArgs e) {
             RemoveChildren();
-            EmployeeAdd addEmployee = new EmployeeAdd {
+            EmployeeAdd addEmployee = new EmployeeAdd (1) {
                 MdiParent = this,  
                 WindowState = FormWindowState.Maximized
             };
@@ -100,6 +100,14 @@ namespace PayrollMgmt {
         public void RemoveChildren () {
             foreach (Form currentForm in MdiChildren)
                 currentForm.Close();
+        }
+
+        public string StatusUpdate {
+            get {
+                return StatusLabel.Text;
+            }
+
+            set => StatusLabel.Text = value;
         }
     }
 }

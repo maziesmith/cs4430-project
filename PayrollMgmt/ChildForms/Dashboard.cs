@@ -1,4 +1,5 @@
 ﻿using PayrollMgmt.ChildForms;
+using PayrollMgmt.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,19 +13,27 @@ using System.Windows.Forms;
 namespace PayrollMgmt {
     public partial class Dashboard : Form {
         ParentForm dashParent;
+        PayrollDatabase dbConn;
 
         public Dashboard (ParentForm dashParent) {
             this.dashParent = dashParent;
             InitializeComponent();
+
+            
+            if((dbConn = PayrollDatabase.Instance) != null) {
+                dashParent.StatusUpdate = "Connected to database successfully!";
+            }
         }
 
         private void AddEmployee_button_Click (object sender, EventArgs e) {
-            dashParent.RemoveChildren();
-            EmployeeAdd addEmployee = new EmployeeAdd {
-                MdiParent = this.dashParent,
-                WindowState = FormWindowState.Maximized
-            };
-            addEmployee.Show();
+            if (DeptInput.SelectedItem != null) {
+                dashParent.RemoveChildren();
+                EmployeeAdd addEmployee = new EmployeeAdd((DeptInput.SelectedItem as ComboBoxItem).Value) {
+                    MdiParent = this.dashParent,
+                    WindowState = FormWindowState.Maximized
+                };
+                addEmployee.Show();
+            }
         }
 
         private void TimeEmployee_button_Click (object sender, EventArgs e) {

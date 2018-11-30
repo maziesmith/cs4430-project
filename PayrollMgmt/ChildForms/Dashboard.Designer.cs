@@ -24,11 +24,11 @@
         /// </summary>
         private void InitializeComponent () {
             this.MainTable = new System.Windows.Forms.TableLayoutPanel();
-            this.eventLog1 = new System.Diagnostics.EventLog();
             this.PayrollGroup = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeGroup = new System.Windows.Forms.GroupBox();
             this.EmployeeTable = new System.Windows.Forms.TableLayoutPanel();
+            this.DeptInput = new System.Windows.Forms.ComboBox();
             this.AddEmployee_button = new System.Windows.Forms.Button();
             this.TimeEmployee_button = new System.Windows.Forms.Button();
             this.ViewEmployee_button = new System.Windows.Forms.Button();
@@ -38,12 +38,12 @@
             this.employeeTimeID = new System.Windows.Forms.TextBox();
             this.employeeDetailsID = new System.Windows.Forms.TextBox();
             this.JobsAndDeptGroup = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.eventLog1 = new System.Diagnostics.EventLog();
             this.MainTable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.EmployeeGroup.SuspendLayout();
             this.EmployeeTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTable
@@ -62,10 +62,6 @@
             this.MainTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.MainTable.Size = new System.Drawing.Size(800, 450);
             this.MainTable.TabIndex = 0;
-            // 
-            // eventLog1
-            // 
-            this.eventLog1.SynchronizingObject = this;
             // 
             // PayrollGroup
             // 
@@ -108,7 +104,7 @@
             this.EmployeeTable.ColumnCount = 2;
             this.EmployeeTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.EmployeeTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.EmployeeTable.Controls.Add(this.comboBox1, 0, 1);
+            this.EmployeeTable.Controls.Add(this.DeptInput, 0, 1);
             this.EmployeeTable.Controls.Add(this.AddEmployee_button, 1, 1);
             this.EmployeeTable.Controls.Add(this.TimeEmployee_button, 1, 3);
             this.EmployeeTable.Controls.Add(this.ViewEmployee_button, 1, 5);
@@ -129,6 +125,18 @@
             this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.50964F));
             this.EmployeeTable.Size = new System.Drawing.Size(385, 194);
             this.EmployeeTable.TabIndex = 0;
+            // 
+            // DeptInput
+            // 
+            this.DeptInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeptInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DeptInput.FormattingEnabled = true;
+            this.DeptInput.Items.AddRange(new object[] {
+            "Information Technology"});
+            this.DeptInput.Location = new System.Drawing.Point(3, 31);
+            this.DeptInput.Name = "DeptInput";
+            this.DeptInput.Size = new System.Drawing.Size(263, 21);
+            this.DeptInput.TabIndex = 0;
             // 
             // AddEmployee_button
             // 
@@ -227,17 +235,9 @@
             this.JobsAndDeptGroup.TabStop = false;
             this.JobsAndDeptGroup.Text = "Jobs and Departments";
             // 
-            // comboBox1
+            // eventLog1
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Information Technology"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Department";
+            this.eventLog1.SynchronizingObject = this;
             // 
             // Dashboard
             // 
@@ -249,11 +249,11 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.MainTable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.EmployeeGroup.ResumeLayout(false);
             this.EmployeeTable.ResumeLayout(false);
             this.EmployeeTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,6 +275,6 @@
         private System.Windows.Forms.TextBox employeeTimeID;
         private System.Windows.Forms.TextBox employeeDetailsID;
         private System.Windows.Forms.GroupBox JobsAndDeptGroup;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox DeptInput;
     }
 }
