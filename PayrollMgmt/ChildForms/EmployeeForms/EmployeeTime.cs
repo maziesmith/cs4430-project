@@ -46,6 +46,7 @@ namespace PayrollMgmt.ChildForms {
             if (!(SelectedRow.Index == TimeDataTable.NewRowIndex)) {
                 update = true;
 
+                EmployeeIDInput.Value = (decimal)((int)SelectedRow.Cells["EmployeeID"].Value);
                 WeekStartInput.Value = (DateTime)SelectedRow.Cells["WeekStart"].Value;
                 WeekEndInput.Value = (DateTime)SelectedRow.Cells["WeekEnd"].Value;
                 TotalHoursInput.Value = (decimal)((double)SelectedRow.Cells["TotalHours"].Value);
@@ -62,17 +63,17 @@ namespace PayrollMgmt.ChildForms {
 
         private void SubmitButton_Click(object sender, EventArgs e) {
             if (update) {
-                updateCurrentRow();
+                UpdateCurrentRow();
             } else {
-                insertNewRow();
+                InsertNewRow();
             }
         }
 
-        private void insertNewRow() {
+        private void InsertNewRow() {
             throw new NotImplementedException();
         }
 
-        private void updateCurrentRow() {
+        private void UpdateCurrentRow() {
             throw new NotImplementedException();
         }
     }
