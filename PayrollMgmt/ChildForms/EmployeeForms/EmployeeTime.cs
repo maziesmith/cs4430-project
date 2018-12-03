@@ -12,10 +12,12 @@ using System.Windows.Forms;
 namespace PayrollMgmt.ChildForms {
     public partial class EmployeeTime : Form {
         PayrollDatabase database;
+        Boolean update = false;
 
         public EmployeeTime (int id) {
             InitializeComponent();
             this.database = PayrollDatabase.Instance;
+
 
             TimeDataTable.DataSource = PopulateDatatable(id);
         }
@@ -38,7 +40,40 @@ namespace PayrollMgmt.ChildForms {
         }
 
         private void TimeDataTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
-            MessageBox.Show("TEst");
+           
+            DataGridViewRow SelectedRow = TimeDataTable.CurrentRow;
+
+            if (!(SelectedRow.Index == TimeDataTable.NewRowIndex)) {
+                update = true;
+
+                WeekStartInput.Value = (DateTime)SelectedRow.Cells["WeekStart"].Value;
+                WeekEndInput.Value = (DateTime)SelectedRow.Cells["WeekEnd"].Value;
+                TotalHoursInput.Value = (decimal)((double)SelectedRow.Cells["TotalHours"].Value);
+                
+                SubmitButton.Text = "Update";
+            } else {
+                update = false;
+
+
+
+                SubmitButton.Text = "Add New";
+            }
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e) {
+            if (update) {
+                updateCurrentRow();
+            } else {
+                insertNewRow();
+            }
+        }
+
+        private void insertNewRow() {
+            throw new NotImplementedException();
+        }
+
+        private void updateCurrentRow() {
+            throw new NotImplementedException();
         }
     }
 }

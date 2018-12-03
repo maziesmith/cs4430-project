@@ -25,14 +25,15 @@
         private void InitializeComponent () {
             this.MainTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.TimeDataTable = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.EditDataTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.WeekStartInput = new System.Windows.Forms.DateTimePicker();
+            this.WeekEndInput = new System.Windows.Forms.DateTimePicker();
+            this.TotalHoursInput = new System.Windows.Forms.NumericUpDown();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.MainTableContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TimeDataTable)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.EditDataTableContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TotalHoursInput)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTableContainer
@@ -41,7 +42,7 @@
             this.MainTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.MainTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.MainTableContainer.Controls.Add(this.TimeDataTable, 1, 0);
-            this.MainTableContainer.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.MainTableContainer.Controls.Add(this.EditDataTableContainer, 0, 0);
             this.MainTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTableContainer.Location = new System.Drawing.Point(0, 0);
             this.MainTableContainer.Name = "MainTableContainer";
@@ -60,50 +61,67 @@
             this.TimeDataTable.TabIndex = 0;
             this.TimeDataTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TimeDataTable_CellMouseClick);
             // 
-            // tableLayoutPanel1
+            // EditDataTableContainer
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dateTimePicker2, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.numericUpDown1, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.11005F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.88995F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 182F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(234, 444);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.EditDataTableContainer.ColumnCount = 1;
+            this.EditDataTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.EditDataTableContainer.Controls.Add(this.WeekStartInput, 0, 2);
+            this.EditDataTableContainer.Controls.Add(this.WeekEndInput, 0, 4);
+            this.EditDataTableContainer.Controls.Add(this.TotalHoursInput, 0, 6);
+            this.EditDataTableContainer.Controls.Add(this.SubmitButton, 0, 7);
+            this.EditDataTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditDataTableContainer.Location = new System.Drawing.Point(3, 3);
+            this.EditDataTableContainer.Name = "EditDataTableContainer";
+            this.EditDataTableContainer.RowCount = 8;
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.825939F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.802048F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.6041F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.802048F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.6041F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.802048F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.6041F));
+            this.EditDataTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.95563F));
+            this.EditDataTableContainer.Size = new System.Drawing.Size(234, 444);
+            this.EditDataTableContainer.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // WeekStartInput
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 95);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.WeekStartInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WeekStartInput.Location = new System.Drawing.Point(3, 58);
+            this.WeekStartInput.Name = "WeekStartInput";
+            this.WeekStartInput.Size = new System.Drawing.Size(228, 20);
+            this.WeekStartInput.TabIndex = 0;
             // 
-            // dateTimePicker2
+            // WeekEndInput
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(3, 176);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 1;
+            this.WeekEndInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.WeekEndInput.Location = new System.Drawing.Point(3, 134);
+            this.WeekEndInput.Name = "WeekEndInput";
+            this.WeekEndInput.Size = new System.Drawing.Size(228, 20);
+            this.WeekEndInput.TabIndex = 1;
             // 
-            // numericUpDown1
+            // TotalHoursInput
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(3, 264);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.ThousandsSeparator = true;
+            this.TotalHoursInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotalHoursInput.DecimalPlaces = 2;
+            this.TotalHoursInput.Location = new System.Drawing.Point(3, 210);
+            this.TotalHoursInput.Name = "TotalHoursInput";
+            this.TotalHoursInput.Size = new System.Drawing.Size(228, 20);
+            this.TotalHoursInput.TabIndex = 2;
+            // 
+            // SubmitButton
+            // 
+            this.SubmitButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SubmitButton.Location = new System.Drawing.Point(79, 261);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitButton.TabIndex = 3;
+            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // EmployeeTime
             // 
@@ -116,8 +134,8 @@
             this.Text = "View Employeee Hours";
             this.MainTableContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TimeDataTable)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.EditDataTableContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TotalHoursInput)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,9 +144,10 @@
 
         private System.Windows.Forms.TableLayoutPanel MainTableContainer;
         private System.Windows.Forms.DataGridView TimeDataTable;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TableLayoutPanel EditDataTableContainer;
+        private System.Windows.Forms.DateTimePicker WeekStartInput;
+        private System.Windows.Forms.DateTimePicker WeekEndInput;
+        private System.Windows.Forms.NumericUpDown TotalHoursInput;
+        private System.Windows.Forms.Button SubmitButton;
     }
 }

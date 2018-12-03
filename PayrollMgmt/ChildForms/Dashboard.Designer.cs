@@ -27,14 +27,14 @@
             this.PayrollGroup = new System.Windows.Forms.GroupBox();
             this.TopTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeGroup = new System.Windows.Forms.GroupBox();
-            this.EmployeeTable = new System.Windows.Forms.TableLayoutPanel();
+            this.EmployeeTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.DeptInput = new System.Windows.Forms.ComboBox();
             this.AddEmployee_button = new System.Windows.Forms.Button();
             this.TimeEmployee_button = new System.Windows.Forms.Button();
             this.ViewEmployee_button = new System.Windows.Forms.Button();
             this.AddLabel = new System.Windows.Forms.Label();
             this.TimeLabel = new System.Windows.Forms.Label();
-            this.viewLabel = new System.Windows.Forms.Label();
+            this.ViewLabel = new System.Windows.Forms.Label();
             this.employeeTimeID = new System.Windows.Forms.TextBox();
             this.EmployeeDetailsID = new System.Windows.Forms.TextBox();
             this.JobsAndDeptGroup = new System.Windows.Forms.GroupBox();
@@ -48,7 +48,7 @@
             this.MainTable.SuspendLayout();
             this.TopTableContainer.SuspendLayout();
             this.EmployeeGroup.SuspendLayout();
-            this.EmployeeTable.SuspendLayout();
+            this.EmployeeTableContainer.SuspendLayout();
             this.JobsAndDeptGroup.SuspendLayout();
             this.DepartmentTableContainer.SuspendLayout();
             this.ViewDeptEmpTableContainer.SuspendLayout();
@@ -98,7 +98,7 @@
             // 
             // EmployeeGroup
             // 
-            this.EmployeeGroup.Controls.Add(this.EmployeeTable);
+            this.EmployeeGroup.Controls.Add(this.EmployeeTableContainer);
             this.EmployeeGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeGroup.Location = new System.Drawing.Point(400, 3);
             this.EmployeeGroup.Name = "EmployeeGroup";
@@ -107,32 +107,32 @@
             this.EmployeeGroup.TabStop = false;
             this.EmployeeGroup.Text = "Employees";
             // 
-            // EmployeeTable
+            // EmployeeTableContainer
             // 
-            this.EmployeeTable.ColumnCount = 2;
-            this.EmployeeTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.EmployeeTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.EmployeeTable.Controls.Add(this.DeptInput, 0, 1);
-            this.EmployeeTable.Controls.Add(this.AddEmployee_button, 1, 1);
-            this.EmployeeTable.Controls.Add(this.TimeEmployee_button, 1, 3);
-            this.EmployeeTable.Controls.Add(this.ViewEmployee_button, 1, 5);
-            this.EmployeeTable.Controls.Add(this.AddLabel, 0, 0);
-            this.EmployeeTable.Controls.Add(this.TimeLabel, 0, 2);
-            this.EmployeeTable.Controls.Add(this.viewLabel, 0, 4);
-            this.EmployeeTable.Controls.Add(this.employeeTimeID, 0, 3);
-            this.EmployeeTable.Controls.Add(this.EmployeeDetailsID, 0, 5);
-            this.EmployeeTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmployeeTable.Location = new System.Drawing.Point(3, 16);
-            this.EmployeeTable.Name = "EmployeeTable";
-            this.EmployeeTable.RowCount = 6;
-            this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10832F));
-            this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.5827F));
-            this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10832F));
-            this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.5827F));
-            this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10832F));
-            this.EmployeeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.50964F));
-            this.EmployeeTable.Size = new System.Drawing.Size(385, 194);
-            this.EmployeeTable.TabIndex = 0;
+            this.EmployeeTableContainer.ColumnCount = 2;
+            this.EmployeeTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.EmployeeTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.EmployeeTableContainer.Controls.Add(this.DeptInput, 0, 1);
+            this.EmployeeTableContainer.Controls.Add(this.AddEmployee_button, 1, 1);
+            this.EmployeeTableContainer.Controls.Add(this.TimeEmployee_button, 1, 3);
+            this.EmployeeTableContainer.Controls.Add(this.ViewEmployee_button, 1, 5);
+            this.EmployeeTableContainer.Controls.Add(this.AddLabel, 0, 0);
+            this.EmployeeTableContainer.Controls.Add(this.TimeLabel, 0, 2);
+            this.EmployeeTableContainer.Controls.Add(this.ViewLabel, 0, 4);
+            this.EmployeeTableContainer.Controls.Add(this.employeeTimeID, 0, 3);
+            this.EmployeeTableContainer.Controls.Add(this.EmployeeDetailsID, 0, 5);
+            this.EmployeeTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeTableContainer.Location = new System.Drawing.Point(3, 16);
+            this.EmployeeTableContainer.Name = "EmployeeTableContainer";
+            this.EmployeeTableContainer.RowCount = 6;
+            this.EmployeeTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10832F));
+            this.EmployeeTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.5827F));
+            this.EmployeeTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10832F));
+            this.EmployeeTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.5827F));
+            this.EmployeeTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.10832F));
+            this.EmployeeTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.50964F));
+            this.EmployeeTableContainer.Size = new System.Drawing.Size(385, 194);
+            this.EmployeeTableContainer.TabIndex = 0;
             // 
             // DeptInput
             // 
@@ -197,15 +197,15 @@
             this.TimeLabel.TabIndex = 4;
             this.TimeLabel.Text = "View Employee Time";
             // 
-            // viewLabel
+            // ViewLabel
             // 
-            this.viewLabel.AutoSize = true;
-            this.viewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewLabel.Location = new System.Drawing.Point(3, 128);
-            this.viewLabel.Name = "viewLabel";
-            this.viewLabel.Size = new System.Drawing.Size(263, 19);
-            this.viewLabel.TabIndex = 5;
-            this.viewLabel.Text = "View Employee Details";
+            this.ViewLabel.AutoSize = true;
+            this.ViewLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewLabel.Location = new System.Drawing.Point(3, 128);
+            this.ViewLabel.Name = "ViewLabel";
+            this.ViewLabel.Size = new System.Drawing.Size(263, 19);
+            this.ViewLabel.TabIndex = 5;
+            this.ViewLabel.Text = "View Employee Details";
             // 
             // employeeTimeID
             // 
@@ -338,8 +338,8 @@
             this.MainTable.ResumeLayout(false);
             this.TopTableContainer.ResumeLayout(false);
             this.EmployeeGroup.ResumeLayout(false);
-            this.EmployeeTable.ResumeLayout(false);
-            this.EmployeeTable.PerformLayout();
+            this.EmployeeTableContainer.ResumeLayout(false);
+            this.EmployeeTableContainer.PerformLayout();
             this.JobsAndDeptGroup.ResumeLayout(false);
             this.DepartmentTableContainer.ResumeLayout(false);
             this.DepartmentTableContainer.PerformLayout();
@@ -354,13 +354,13 @@
         private System.Windows.Forms.GroupBox PayrollGroup;
         private System.Windows.Forms.TableLayoutPanel TopTableContainer;
         private System.Windows.Forms.GroupBox EmployeeGroup;
-        private System.Windows.Forms.TableLayoutPanel EmployeeTable;
+        private System.Windows.Forms.TableLayoutPanel EmployeeTableContainer;
         private System.Windows.Forms.Button AddEmployee_button;
         private System.Windows.Forms.Button TimeEmployee_button;
         private System.Windows.Forms.Button ViewEmployee_button;
         private System.Windows.Forms.Label AddLabel;
         private System.Windows.Forms.Label TimeLabel;
-        private System.Windows.Forms.Label viewLabel;
+        private System.Windows.Forms.Label ViewLabel;
         private System.Windows.Forms.TextBox employeeTimeID;
         private System.Windows.Forms.TextBox EmployeeDetailsID;
         private System.Windows.Forms.GroupBox JobsAndDeptGroup;
