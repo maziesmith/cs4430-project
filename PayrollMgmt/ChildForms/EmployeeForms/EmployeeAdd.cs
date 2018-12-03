@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace PayrollMgmt.ChildForms {
     public partial class EmployeeAdd : Form {
-        public EmployeeAdd () {
+        PayrollDatabase database;
+
+        public EmployeeAdd (int deptID) {
             InitializeComponent();
-            PayrollDatabase dbconn = PayrollDatabase.Instance;
+            this.database = PayrollDatabase.Instance;
         }
     }
 }

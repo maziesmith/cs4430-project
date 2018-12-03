@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PayrollMgmt.ChildForms {
     public sealed class PayrollDatabase {
         public static PayrollDatabase Instance { get; } = new PayrollDatabase();
-        private MySqlConnection conn;
+        public MySqlConnection conn { get; private set; }
 
         PayrollDatabase() {
             DBConnect();
