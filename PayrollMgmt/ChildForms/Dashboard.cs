@@ -122,13 +122,12 @@ namespace PayrollMgmt {
 
         private void ViewDeptEmpButton_Click(object sender, EventArgs e) {
             if(ViewDeptEmpInput.SelectedItem != null) {
-
-            DepartmentEmployees employeesDepartment = new DepartmentEmployees((ViewDeptEmpInput.SelectedItem as ComboBoxItem).Value) {
-                MdiParent = this.dashParent,
-                WindowState = FormWindowState.Maximized
-            };
-            employeesDepartment.Show();
-            this.Close();
+                DepartmentEmployees employeesDepartment = new DepartmentEmployees((ViewDeptEmpInput.SelectedItem as ComboBoxItem).Value) {
+                    MdiParent = this.dashParent,
+                    WindowState = FormWindowState.Maximized
+                };
+                employeesDepartment.Show();
+                this.Close();
             }
         }
     }
