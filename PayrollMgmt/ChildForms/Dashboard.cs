@@ -2,6 +2,7 @@
 using PayrollMgmt.ChildForms;
 using PayrollMgmt.ChildForms.DepartmentForms;
 using PayrollMgmt.ChildForms.EmployeeForms;
+using PayrollMgmt.ChildForms.PayrollForms;
 using PayrollMgmt.Utils;
 using System;
 using System.Collections.Generic;
@@ -83,7 +84,7 @@ namespace PayrollMgmt {
                 this.Close();
             } catch(FormatException){
                 MessageBox.Show(
-                    "This field only accepts integers! \nPlease reenter a valid employee ID", 
+                    "Invalid Input", 
                     "Format Error", 
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
@@ -134,7 +135,7 @@ namespace PayrollMgmt {
 
         private void PayDeptInput_SelectedIndexChanged(object sender, EventArgs e) {
             dbConn.conn.Open();
-            string queryEmployees = "SELECT EmployeeID, CONCAT(LastName, ', ', FirstName) AS Name FROM employees NATURAL JOIN jobs WHERE DepartmentID = @did";
+            string queryEmployees = "SELECT EmployeeID, CONCAT('ID: ', EmployeeID, ' - ', LastName, ', ', FirstName) AS Name FROM employees NATURAL JOIN jobs WHERE DepartmentID = @did";
 
             PayEmpInput.Items.Clear();
 
@@ -148,6 +149,29 @@ namespace PayrollMgmt {
             }
 
             dbConn.conn.Close();
+        }
+
+        private void PayEmpButton_Click(object sender, EventArgs e) {
+            if (PayEmpInput.SelectedItem != null) {
+                PayrollPay payPayroll = new PayrollPay((PayEmpInput.SelectedItem as ComboBoxItem).Value) {
+                    MdiParent = this.dashParent,
+                    WindowState = FormWindowState.Maximized
+                };
+                payPayroll.Show();
+                this.Close();
+            }
+        }
+
+        private void EmployeeDetailsID_KeyDown(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Enter) {
+                ViewEmployee_button_Click(this, new EventArgs());
+            }
+        }
+
+        private void employeeTimeID_KeyDown(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Enter) {
+                TimeEmployee_button_Click(this, new EventArgs());
+            }
         }
     }
 }

@@ -99,6 +99,12 @@
     <Compile Include="ChildForms\EmployeeForms\EmployeeTime.Designer.cs">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\PayrollForms\PayrollPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\PayrollForms\PayrollPay.Designer.cs">
+      <DependentUpon>PayrollPay.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayrollDatabase.cs" />
     <Compile Include="ParentForm.cs">
       <SubType>Form</SubType>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeTime.resx">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\PayrollForms\PayrollPay.resx">
+      <DependentUpon>PayrollPay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParentForm.resx">
       <DependentUpon>ParentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,8 +167,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ChildForms\PayrollForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

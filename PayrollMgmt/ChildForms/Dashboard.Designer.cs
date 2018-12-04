@@ -25,6 +25,14 @@
         private void InitializeComponent () {
             this.MainTable = new System.Windows.Forms.TableLayoutPanel();
             this.PayrollGroup = new System.Windows.Forms.GroupBox();
+            this.PayrollTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.PayEmpTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.PayEmployeeLabel = new System.Windows.Forms.Label();
+            this.PayDeptInput = new System.Windows.Forms.ComboBox();
+            this.PayEmpInput = new System.Windows.Forms.ComboBox();
+            this.PayEmpButton = new System.Windows.Forms.Button();
+            this.PayDeptLabel = new System.Windows.Forms.Label();
+            this.PayEmpLabel = new System.Windows.Forms.Label();
             this.TopTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeGroup = new System.Windows.Forms.GroupBox();
             this.EmployeeTableContainer = new System.Windows.Forms.TableLayoutPanel();
@@ -45,24 +53,16 @@
             this.ViewDeptEmpInput = new System.Windows.Forms.ComboBox();
             this.ViewDeptEmpButton = new System.Windows.Forms.Button();
             this.ViewDepartmentButton = new System.Windows.Forms.Button();
-            this.PayrollTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.PayEmpTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.PayEmployeeLabel = new System.Windows.Forms.Label();
-            this.PayEmpInput = new System.Windows.Forms.ComboBox();
-            this.PayDeptInput = new System.Windows.Forms.ComboBox();
-            this.PayEmpButton = new System.Windows.Forms.Button();
-            this.PayDeptLabel = new System.Windows.Forms.Label();
-            this.PayEmpLabel = new System.Windows.Forms.Label();
             this.MainTable.SuspendLayout();
             this.PayrollGroup.SuspendLayout();
+            this.PayrollTableContainer.SuspendLayout();
+            this.PayEmpTableContainer.SuspendLayout();
             this.TopTableContainer.SuspendLayout();
             this.EmployeeGroup.SuspendLayout();
             this.EmployeeTableContainer.SuspendLayout();
             this.JobsAndDeptGroup.SuspendLayout();
             this.DepartmentTableContainer.SuspendLayout();
             this.ViewDeptEmpTableContainer.SuspendLayout();
-            this.PayrollTableContainer.SuspendLayout();
-            this.PayEmpTableContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTable
@@ -92,6 +92,108 @@
             this.PayrollGroup.TabIndex = 2;
             this.PayrollGroup.TabStop = false;
             this.PayrollGroup.Text = "Payroll";
+            // 
+            // PayrollTableContainer
+            // 
+            this.PayrollTableContainer.ColumnCount = 4;
+            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.PayrollTableContainer.Controls.Add(this.PayEmpTableContainer, 0, 0);
+            this.PayrollTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PayrollTableContainer.Location = new System.Drawing.Point(3, 16);
+            this.PayrollTableContainer.Name = "PayrollTableContainer";
+            this.PayrollTableContainer.RowCount = 1;
+            this.PayrollTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PayrollTableContainer.Size = new System.Drawing.Size(788, 200);
+            this.PayrollTableContainer.TabIndex = 0;
+            // 
+            // PayEmpTableContainer
+            // 
+            this.PayEmpTableContainer.ColumnCount = 1;
+            this.PayEmpTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.PayEmpTableContainer.Controls.Add(this.PayEmployeeLabel, 0, 0);
+            this.PayEmpTableContainer.Controls.Add(this.PayDeptInput, 0, 3);
+            this.PayEmpTableContainer.Controls.Add(this.PayEmpInput, 0, 5);
+            this.PayEmpTableContainer.Controls.Add(this.PayEmpButton, 0, 6);
+            this.PayEmpTableContainer.Controls.Add(this.PayDeptLabel, 0, 2);
+            this.PayEmpTableContainer.Controls.Add(this.PayEmpLabel, 0, 4);
+            this.PayEmpTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PayEmpTableContainer.Location = new System.Drawing.Point(3, 3);
+            this.PayEmpTableContainer.Name = "PayEmpTableContainer";
+            this.PayEmpTableContainer.RowCount = 7;
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.34021F));
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.185567F));
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.247422F));
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216F));
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.762887F));
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97938F));
+            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
+            this.PayEmpTableContainer.Size = new System.Drawing.Size(191, 194);
+            this.PayEmpTableContainer.TabIndex = 0;
+            // 
+            // PayEmployeeLabel
+            // 
+            this.PayEmployeeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PayEmployeeLabel.AutoSize = true;
+            this.PayEmployeeLabel.Location = new System.Drawing.Point(58, 4);
+            this.PayEmployeeLabel.Name = "PayEmployeeLabel";
+            this.PayEmployeeLabel.Size = new System.Drawing.Size(74, 13);
+            this.PayEmployeeLabel.TabIndex = 0;
+            this.PayEmployeeLabel.Text = "Pay Employee";
+            // 
+            // PayDeptInput
+            // 
+            this.PayDeptInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayDeptInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PayDeptInput.FormattingEnabled = true;
+            this.PayDeptInput.Location = new System.Drawing.Point(3, 58);
+            this.PayDeptInput.Name = "PayDeptInput";
+            this.PayDeptInput.Size = new System.Drawing.Size(185, 21);
+            this.PayDeptInput.TabIndex = 2;
+            this.PayDeptInput.SelectedIndexChanged += new System.EventHandler(this.PayDeptInput_SelectedIndexChanged);
+            // 
+            // PayEmpInput
+            // 
+            this.PayEmpInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PayEmpInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PayEmpInput.FormattingEnabled = true;
+            this.PayEmpInput.Location = new System.Drawing.Point(3, 109);
+            this.PayEmpInput.Name = "PayEmpInput";
+            this.PayEmpInput.Size = new System.Drawing.Size(185, 21);
+            this.PayEmpInput.TabIndex = 1;
+            // 
+            // PayEmpButton
+            // 
+            this.PayEmpButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PayEmpButton.Location = new System.Drawing.Point(52, 153);
+            this.PayEmpButton.Name = "PayEmpButton";
+            this.PayEmpButton.Size = new System.Drawing.Size(87, 23);
+            this.PayEmpButton.TabIndex = 3;
+            this.PayEmpButton.Text = "Pay Employee";
+            this.PayEmpButton.UseVisualStyleBackColor = true;
+            this.PayEmpButton.Click += new System.EventHandler(this.PayEmpButton_Click);
+            // 
+            // PayDeptLabel
+            // 
+            this.PayDeptLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PayDeptLabel.AutoSize = true;
+            this.PayDeptLabel.Location = new System.Drawing.Point(3, 37);
+            this.PayDeptLabel.Name = "PayDeptLabel";
+            this.PayDeptLabel.Size = new System.Drawing.Size(62, 13);
+            this.PayDeptLabel.TabIndex = 4;
+            this.PayDeptLabel.Text = "Department";
+            // 
+            // PayEmpLabel
+            // 
+            this.PayEmpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PayEmpLabel.AutoSize = true;
+            this.PayEmpLabel.Location = new System.Drawing.Point(3, 91);
+            this.PayEmpLabel.Name = "PayEmpLabel";
+            this.PayEmpLabel.Size = new System.Drawing.Size(53, 13);
+            this.PayEmpLabel.TabIndex = 5;
+            this.PayEmpLabel.Text = "Employee\r\n";
             // 
             // TopTableContainer
             // 
@@ -185,7 +287,7 @@
             this.ViewEmployee_button.Name = "ViewEmployee_button";
             this.ViewEmployee_button.Size = new System.Drawing.Size(110, 40);
             this.ViewEmployee_button.TabIndex = 2;
-            this.ViewEmployee_button.Text = "Submit";
+            this.ViewEmployee_button.Text = "Search";
             this.ViewEmployee_button.UseVisualStyleBackColor = true;
             this.ViewEmployee_button.Click += new System.EventHandler(this.ViewEmployee_button_Click);
             // 
@@ -229,6 +331,7 @@
             this.employeeTimeID.TabIndex = 7;
             this.employeeTimeID.Text = "Employee ID";
             this.employeeTimeID.Enter += new System.EventHandler(this.EmployeeID_Enter);
+            this.employeeTimeID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.employeeTimeID_KeyDown);
             this.employeeTimeID.Leave += new System.EventHandler(this.EmployeeID_Leave);
             // 
             // EmployeeDetailsID
@@ -239,6 +342,7 @@
             this.EmployeeDetailsID.Name = "EmployeeDetailsID";
             this.EmployeeDetailsID.Size = new System.Drawing.Size(263, 20);
             this.EmployeeDetailsID.TabIndex = 6;
+            this.EmployeeDetailsID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EmployeeDetailsID_KeyDown);
             // 
             // JobsAndDeptGroup
             // 
@@ -337,107 +441,6 @@
             this.ViewDepartmentButton.UseVisualStyleBackColor = true;
             this.ViewDepartmentButton.Click += new System.EventHandler(this.ViewDepartmentButton_Click);
             // 
-            // PayrollTableContainer
-            // 
-            this.PayrollTableContainer.ColumnCount = 4;
-            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.PayrollTableContainer.Controls.Add(this.PayEmpTableContainer, 0, 0);
-            this.PayrollTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PayrollTableContainer.Location = new System.Drawing.Point(3, 16);
-            this.PayrollTableContainer.Name = "PayrollTableContainer";
-            this.PayrollTableContainer.RowCount = 1;
-            this.PayrollTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PayrollTableContainer.Size = new System.Drawing.Size(788, 200);
-            this.PayrollTableContainer.TabIndex = 0;
-            // 
-            // PayEmpTableContainer
-            // 
-            this.PayEmpTableContainer.ColumnCount = 1;
-            this.PayEmpTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PayEmpTableContainer.Controls.Add(this.PayEmployeeLabel, 0, 0);
-            this.PayEmpTableContainer.Controls.Add(this.PayDeptInput, 0, 3);
-            this.PayEmpTableContainer.Controls.Add(this.PayEmpInput, 0, 5);
-            this.PayEmpTableContainer.Controls.Add(this.PayEmpButton, 0, 6);
-            this.PayEmpTableContainer.Controls.Add(this.PayDeptLabel, 0, 2);
-            this.PayEmpTableContainer.Controls.Add(this.PayEmpLabel, 0, 4);
-            this.PayEmpTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PayEmpTableContainer.Location = new System.Drawing.Point(3, 3);
-            this.PayEmpTableContainer.Name = "PayEmpTableContainer";
-            this.PayEmpTableContainer.RowCount = 7;
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.34021F));
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.185567F));
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.247422F));
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216F));
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.762887F));
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97938F));
-            this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
-            this.PayEmpTableContainer.Size = new System.Drawing.Size(191, 194);
-            this.PayEmpTableContainer.TabIndex = 0;
-            // 
-            // PayEmployeeLabel
-            // 
-            this.PayEmployeeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PayEmployeeLabel.AutoSize = true;
-            this.PayEmployeeLabel.Location = new System.Drawing.Point(58, 4);
-            this.PayEmployeeLabel.Name = "PayEmployeeLabel";
-            this.PayEmployeeLabel.Size = new System.Drawing.Size(74, 13);
-            this.PayEmployeeLabel.TabIndex = 0;
-            this.PayEmployeeLabel.Text = "Pay Employee";
-            // 
-            // PayEmpInput
-            // 
-            this.PayEmpInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PayEmpInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PayEmpInput.FormattingEnabled = true;
-            this.PayEmpInput.Location = new System.Drawing.Point(3, 109);
-            this.PayEmpInput.Name = "PayEmpInput";
-            this.PayEmpInput.Size = new System.Drawing.Size(185, 21);
-            this.PayEmpInput.TabIndex = 1;
-            // 
-            // PayDeptInput
-            // 
-            this.PayDeptInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PayDeptInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PayDeptInput.FormattingEnabled = true;
-            this.PayDeptInput.Location = new System.Drawing.Point(3, 58);
-            this.PayDeptInput.Name = "PayDeptInput";
-            this.PayDeptInput.Size = new System.Drawing.Size(185, 21);
-            this.PayDeptInput.TabIndex = 2;
-            this.PayDeptInput.SelectedIndexChanged += new System.EventHandler(this.PayDeptInput_SelectedIndexChanged);
-            // 
-            // PayEmpButton
-            // 
-            this.PayEmpButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PayEmpButton.Location = new System.Drawing.Point(52, 153);
-            this.PayEmpButton.Name = "PayEmpButton";
-            this.PayEmpButton.Size = new System.Drawing.Size(87, 23);
-            this.PayEmpButton.TabIndex = 3;
-            this.PayEmpButton.Text = "Pay Employee";
-            this.PayEmpButton.UseVisualStyleBackColor = true;
-            // 
-            // PayDeptLabel
-            // 
-            this.PayDeptLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PayDeptLabel.AutoSize = true;
-            this.PayDeptLabel.Location = new System.Drawing.Point(3, 37);
-            this.PayDeptLabel.Name = "PayDeptLabel";
-            this.PayDeptLabel.Size = new System.Drawing.Size(62, 13);
-            this.PayDeptLabel.TabIndex = 4;
-            this.PayDeptLabel.Text = "Department";
-            // 
-            // PayEmpLabel
-            // 
-            this.PayEmpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PayEmpLabel.AutoSize = true;
-            this.PayEmpLabel.Location = new System.Drawing.Point(3, 91);
-            this.PayEmpLabel.Name = "PayEmpLabel";
-            this.PayEmpLabel.Size = new System.Drawing.Size(53, 13);
-            this.PayEmpLabel.TabIndex = 5;
-            this.PayEmpLabel.Text = "Employee\r\n";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +452,9 @@
             this.Text = "Dashboard";
             this.MainTable.ResumeLayout(false);
             this.PayrollGroup.ResumeLayout(false);
+            this.PayrollTableContainer.ResumeLayout(false);
+            this.PayEmpTableContainer.ResumeLayout(false);
+            this.PayEmpTableContainer.PerformLayout();
             this.TopTableContainer.ResumeLayout(false);
             this.EmployeeGroup.ResumeLayout(false);
             this.EmployeeTableContainer.ResumeLayout(false);
@@ -457,9 +463,6 @@
             this.DepartmentTableContainer.ResumeLayout(false);
             this.DepartmentTableContainer.PerformLayout();
             this.ViewDeptEmpTableContainer.ResumeLayout(false);
-            this.PayrollTableContainer.ResumeLayout(false);
-            this.PayEmpTableContainer.ResumeLayout(false);
-            this.PayEmpTableContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
