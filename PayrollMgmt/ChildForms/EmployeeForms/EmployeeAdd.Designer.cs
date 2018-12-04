@@ -27,8 +27,8 @@
             this.DetailsGroup = new System.Windows.Forms.GroupBox();
             this.PersonalTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.NameTablecontainer = new System.Windows.Forms.TableLayoutPanel();
-            this.LnameInput = new System.Windows.Forms.TextBox();
             this.FnameInput = new System.Windows.Forms.TextBox();
+            this.LnameInput = new System.Windows.Forms.TextBox();
             this.FnamLabel = new System.Windows.Forms.Label();
             this.LnameLabel = new System.Windows.Forms.Label();
             this.StreetTableContainer = new System.Windows.Forms.TableLayoutPanel();
@@ -44,8 +44,8 @@
             this.ZipLabel = new System.Windows.Forms.Label();
             this.ZipInput = new System.Windows.Forms.NumericUpDown();
             this.PhoneTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.PhoneInput = new System.Windows.Forms.NumericUpDown();
             this.PhoneLabel = new System.Windows.Forms.Label();
+            this.PhoneInput = new System.Windows.Forms.TextBox();
             this.HireDateTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.HireDateLabel = new System.Windows.Forms.Label();
             this.HireDateInput = new System.Windows.Forms.DateTimePicker();
@@ -74,7 +74,6 @@
             this.ZipTableContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ZipInput)).BeginInit();
             this.PhoneTableContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneInput)).BeginInit();
             this.HireDateTableContainer.SuspendLayout();
             this.JobGroup.SuspendLayout();
             this.JobDetailsTableContainer.SuspendLayout();
@@ -140,8 +139,8 @@
             this.NameTablecontainer.ColumnCount = 2;
             this.NameTablecontainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.NameTablecontainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.NameTablecontainer.Controls.Add(this.LnameInput, 0, 1);
-            this.NameTablecontainer.Controls.Add(this.FnameInput, 1, 1);
+            this.NameTablecontainer.Controls.Add(this.FnameInput, 0, 1);
+            this.NameTablecontainer.Controls.Add(this.LnameInput, 1, 1);
             this.NameTablecontainer.Controls.Add(this.FnamLabel, 0, 0);
             this.NameTablecontainer.Controls.Add(this.LnameLabel, 1, 0);
             this.NameTablecontainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -153,23 +152,25 @@
             this.NameTablecontainer.Size = new System.Drawing.Size(382, 54);
             this.NameTablecontainer.TabIndex = 0;
             // 
-            // LnameInput
-            // 
-            this.LnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LnameInput.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.LnameInput.Location = new System.Drawing.Point(3, 27);
-            this.LnameInput.Name = "LnameInput";
-            this.LnameInput.Size = new System.Drawing.Size(185, 20);
-            this.LnameInput.TabIndex = 0;
-            // 
             // FnameInput
             // 
             this.FnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.FnameInput.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.FnameInput.Location = new System.Drawing.Point(194, 27);
+            this.FnameInput.Location = new System.Drawing.Point(3, 27);
+            this.FnameInput.MaxLength = 50;
             this.FnameInput.Name = "FnameInput";
             this.FnameInput.Size = new System.Drawing.Size(185, 20);
-            this.FnameInput.TabIndex = 1;
+            this.FnameInput.TabIndex = 0;
+            // 
+            // LnameInput
+            // 
+            this.LnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnameInput.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.LnameInput.Location = new System.Drawing.Point(194, 27);
+            this.LnameInput.MaxLength = 50;
+            this.LnameInput.Name = "LnameInput";
+            this.LnameInput.Size = new System.Drawing.Size(185, 20);
+            this.LnameInput.TabIndex = 1;
             // 
             // FnamLabel
             // 
@@ -220,6 +221,7 @@
             // 
             this.StreetInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.StreetInput.Location = new System.Drawing.Point(3, 25);
+            this.StreetInput.MaxLength = 256;
             this.StreetInput.Name = "StreetInput";
             this.StreetInput.Size = new System.Drawing.Size(376, 20);
             this.StreetInput.TabIndex = 1;
@@ -243,6 +245,7 @@
             // 
             this.CityInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CityInput.Location = new System.Drawing.Point(3, 25);
+            this.CityInput.MaxLength = 256;
             this.CityInput.Name = "CityInput";
             this.CityInput.Size = new System.Drawing.Size(376, 20);
             this.CityInput.TabIndex = 2;
@@ -285,7 +288,59 @@
             // StateInput
             // 
             this.StateInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.StateInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.StateInput.FormattingEnabled = true;
+            this.StateInput.Items.AddRange(new object[] {
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"});
             this.StateInput.Location = new System.Drawing.Point(3, 24);
             this.StateInput.Name = "StateInput";
             this.StateInput.Size = new System.Drawing.Size(376, 21);
@@ -320,6 +375,11 @@
             // 
             this.ZipInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ZipInput.Location = new System.Drawing.Point(3, 25);
+            this.ZipInput.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
             this.ZipInput.Name = "ZipInput";
             this.ZipInput.Size = new System.Drawing.Size(376, 20);
             this.ZipInput.TabIndex = 1;
@@ -329,8 +389,8 @@
             // 
             this.PhoneTableContainer.ColumnCount = 1;
             this.PhoneTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PhoneTableContainer.Controls.Add(this.PhoneInput, 0, 1);
             this.PhoneTableContainer.Controls.Add(this.PhoneLabel, 0, 0);
+            this.PhoneTableContainer.Controls.Add(this.PhoneInput, 0, 1);
             this.PhoneTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PhoneTableContainer.Location = new System.Drawing.Point(3, 303);
             this.PhoneTableContainer.Name = "PhoneTableContainer";
@@ -339,15 +399,6 @@
             this.PhoneTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.PhoneTableContainer.Size = new System.Drawing.Size(382, 54);
             this.PhoneTableContainer.TabIndex = 5;
-            // 
-            // PhoneInput
-            // 
-            this.PhoneInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneInput.Location = new System.Drawing.Point(3, 25);
-            this.PhoneInput.Name = "PhoneInput";
-            this.PhoneInput.Size = new System.Drawing.Size(376, 20);
-            this.PhoneInput.TabIndex = 2;
-            this.PhoneInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // PhoneLabel
             // 
@@ -358,6 +409,15 @@
             this.PhoneLabel.Size = new System.Drawing.Size(78, 13);
             this.PhoneLabel.TabIndex = 0;
             this.PhoneLabel.Text = "Phone Number";
+            // 
+            // PhoneInput
+            // 
+            this.PhoneInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhoneInput.Location = new System.Drawing.Point(3, 25);
+            this.PhoneInput.MaxLength = 24;
+            this.PhoneInput.Name = "PhoneInput";
+            this.PhoneInput.Size = new System.Drawing.Size(376, 20);
+            this.PhoneInput.TabIndex = 1;
             // 
             // HireDateTableContainer
             // 
@@ -453,6 +513,7 @@
             // BonusInput
             // 
             this.BonusInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BonusInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BonusInput.FormattingEnabled = true;
             this.BonusInput.Location = new System.Drawing.Point(3, 40);
             this.BonusInput.Name = "BonusInput";
@@ -487,6 +548,7 @@
             // DeductionInput
             // 
             this.DeductionInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeductionInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DeductionInput.FormattingEnabled = true;
             this.DeductionInput.Location = new System.Drawing.Point(3, 40);
             this.DeductionInput.Name = "DeductionInput";
@@ -522,6 +584,7 @@
             // HolidayInput
             // 
             this.HolidayInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HolidayInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HolidayInput.FormattingEnabled = true;
             this.HolidayInput.Location = new System.Drawing.Point(3, 40);
             this.HolidayInput.Name = "HolidayInput";
@@ -546,6 +609,7 @@
             // JobInput
             // 
             this.JobInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.JobInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.JobInput.FormattingEnabled = true;
             this.JobInput.Location = new System.Drawing.Point(3, 40);
             this.JobInput.Name = "JobInput";
@@ -598,7 +662,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ZipInput)).EndInit();
             this.PhoneTableContainer.ResumeLayout(false);
             this.PhoneTableContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneInput)).EndInit();
             this.HireDateTableContainer.ResumeLayout(false);
             this.HireDateTableContainer.PerformLayout();
             this.JobGroup.ResumeLayout(false);
@@ -622,8 +685,8 @@
         private System.Windows.Forms.TableLayoutPanel PersonalTableContainer;
         private System.Windows.Forms.TableLayoutPanel NameTablecontainer;
         private System.Windows.Forms.GroupBox JobGroup;
-        private System.Windows.Forms.TextBox LnameInput;
         private System.Windows.Forms.TextBox FnameInput;
+        private System.Windows.Forms.TextBox LnameInput;
         private System.Windows.Forms.Label FnamLabel;
         private System.Windows.Forms.Label LnameLabel;
         private System.Windows.Forms.TableLayoutPanel StreetTableContainer;
@@ -642,7 +705,6 @@
         private System.Windows.Forms.TextBox CityInput;
         private System.Windows.Forms.ComboBox StateInput;
         private System.Windows.Forms.NumericUpDown ZipInput;
-        private System.Windows.Forms.NumericUpDown PhoneInput;
         private System.Windows.Forms.DateTimePicker HireDateInput;
         private System.Windows.Forms.TableLayoutPanel JobDetailsTableContainer;
         private System.Windows.Forms.TableLayoutPanel BonusTableContainer;
@@ -658,5 +720,6 @@
         private System.Windows.Forms.Label JobLabel;
         private System.Windows.Forms.Label HolidayLabel;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.TextBox PhoneInput;
     }
 }
