@@ -26,7 +26,8 @@ namespace PayrollMgmt.ChildForms {
         }
 
         private DataTable PopulateDatatable(int id) {
-            string queryTime = "SELECT LastName, FirstName, WeekStart, WeekEnd, TotalHours FROM weeklyhours NATURAL JOIN employees WHERE EmployeeID = @eid";
+            string queryTime = "SELECT LastName, FirstName, WeekStart, WeekEnd, TotalHours " +
+                "FROM weeklyhours NATURAL JOIN employees WHERE EmployeeID = @eid";
             DataTable ResultTable = new DataTable();
             MySqlCommand command = new MySqlCommand(queryTime, database.conn);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
@@ -80,7 +81,8 @@ namespace PayrollMgmt.ChildForms {
         }
 
         private void InsertNewRow(DateTime start, DateTime end, decimal hours) {
-            string queryTime = "INSERT INTO weeklyhours (EmployeeID, WeekStart, WeekEnd, TotalHours) VALUES (@id, @start, @end, @hours)";
+            string queryTime = "INSERT INTO weeklyhours (EmployeeID, WeekStart, WeekEnd, TotalHours) " +
+                "VALUES (@id, @start, @end, @hours)";
 
             database.conn.Open();
             MySqlCommand command = new MySqlCommand(queryTime, database.conn);
