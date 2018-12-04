@@ -57,6 +57,18 @@
     <Compile Include="ChildForms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentEmployees.Designer.cs">
+      <DependentUpon>DepartmentEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentView.Designer.cs">
+      <DependentUpon>DepartmentView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\EmployeeForms\EmployeeAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     </Compile>
     <Compile Include="ChildForms\EmployeeForms\EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\EmployeeForms\EmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\EmployeeForms\EmployeeList.Designer.cs">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\EmployeeForms\EmployeeTime.cs">
       <SubType>Form</SubType>
@@ -93,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeList.resx">
+      <DependentUpon>EmployeeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeTime.resx">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
@@ -121,6 +142,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ChildForms\PayrollForms\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

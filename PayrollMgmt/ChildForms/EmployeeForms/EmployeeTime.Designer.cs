@@ -66,7 +66,7 @@
             this.TimeDataTable.ReadOnly = true;
             this.TimeDataTable.Size = new System.Drawing.Size(554, 444);
             this.TimeDataTable.TabIndex = 0;
-            this.TimeDataTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TimeDataTable_CellMouseClick);
+            this.TimeDataTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TimeDataTable_CellDoubleClick);
             // 
             // EditDataTableContainer
             // 

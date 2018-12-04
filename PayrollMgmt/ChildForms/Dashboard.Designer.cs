@@ -205,7 +205,7 @@
             this.ViewLabel.Name = "ViewLabel";
             this.ViewLabel.Size = new System.Drawing.Size(263, 19);
             this.ViewLabel.TabIndex = 5;
-            this.ViewLabel.Text = "View Employee Details";
+            this.ViewLabel.Text = "Search Employees";
             // 
             // employeeTimeID
             // 
@@ -222,14 +222,11 @@
             // EmployeeDetailsID
             // 
             this.EmployeeDetailsID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmployeeDetailsID.ForeColor = System.Drawing.Color.Gray;
+            this.EmployeeDetailsID.ForeColor = System.Drawing.Color.Black;
             this.EmployeeDetailsID.Location = new System.Drawing.Point(3, 160);
             this.EmployeeDetailsID.Name = "EmployeeDetailsID";
             this.EmployeeDetailsID.Size = new System.Drawing.Size(263, 20);
             this.EmployeeDetailsID.TabIndex = 6;
-            this.EmployeeDetailsID.Text = "Employee ID";
-            this.EmployeeDetailsID.Enter += new System.EventHandler(this.EmployeeID_Enter);
-            this.EmployeeDetailsID.Leave += new System.EventHandler(this.EmployeeID_Leave);
             // 
             // JobsAndDeptGroup
             // 

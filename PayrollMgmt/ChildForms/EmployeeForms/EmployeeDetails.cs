@@ -10,8 +10,20 @@ using System.Windows.Forms;
 
 namespace PayrollMgmt.ChildForms {
     public partial class EmployeeDetails : Form {
+        PayrollDatabase database;
+        int ID;
+
         public EmployeeDetails (int id) {
             InitializeComponent();
+
+            this.database = PayrollDatabase.Instance;
+            this.ID = id;
+
+            PopulateFields();
+        }
+
+        private void PopulateFields() {
+            
         }
     }
 }

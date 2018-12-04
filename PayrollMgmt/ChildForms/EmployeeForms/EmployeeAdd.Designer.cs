@@ -107,7 +107,7 @@
             this.DetailsGroup.Size = new System.Drawing.Size(394, 444);
             this.DetailsGroup.TabIndex = 0;
             this.DetailsGroup.TabStop = false;
-            this.DetailsGroup.Text = "Personal Details";
+            this.DetailsGroup.Text = "v";
             // 
             // PersonalTableContainer
             // 

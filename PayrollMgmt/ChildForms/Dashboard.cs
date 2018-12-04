@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using PayrollMgmt.ChildForms;
+using PayrollMgmt.ChildForms.EmployeeForms;
 using PayrollMgmt.Utils;
 using System;
 using System.Collections.Generic;
@@ -72,11 +73,11 @@ namespace PayrollMgmt {
 
         private void ViewEmployee_button_Click (object sender, EventArgs e) {
             try {
-                EmployeeDetails detailsEmployee = new EmployeeDetails(Int32.Parse(this.EmployeeDetailsID.Text)) {
+                EmployeeList listEmployee = new EmployeeList(this.EmployeeDetailsID.Text) {
                     MdiParent = this.dashParent,
                     WindowState = FormWindowState.Maximized
                 };
-                detailsEmployee.Show();
+                listEmployee.Show();
                 this.Close();
             } catch(FormatException){
                 MessageBox.Show(

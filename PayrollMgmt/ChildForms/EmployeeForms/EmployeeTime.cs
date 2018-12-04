@@ -43,34 +43,6 @@ namespace PayrollMgmt.ChildForms {
             return ResultTable;
         }
 
-        private void TimeDataTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
-           
-            DataGridViewRow SelectedRow = TimeDataTable.CurrentRow;
-
-            if (!(SelectedRow.Index == TimeDataTable.NewRowIndex)) {
-                update = true;
-
-                WeekStartInput.Enabled = false;
-                WeekEndInput.Enabled = false;
-
-                WeekStartInput.Value = (DateTime)SelectedRow.Cells["WeekStart"].Value;
-                WeekEndInput.Value = (DateTime)SelectedRow.Cells["WeekEnd"].Value;
-                TotalHoursInput.Value = (decimal)((double)SelectedRow.Cells["TotalHours"].Value);
-                
-                SubmitButton.Text = "Update";
-            } else {
-                update = false;
-
-                WeekStartInput.Enabled = true;
-                WeekEndInput.Enabled = false;
-
-                WeekStartInput.Value = DateTime.Today;
-                WeekEndInput.Value = DateTime.Today.AddDays(6);
-                TotalHoursInput.Value = (decimal)0.0;
-
-                SubmitButton.Text = "Add New";
-            }
-        }
 
         private void SubmitButton_Click(object sender, EventArgs e) {
             if (update) {
@@ -127,6 +99,34 @@ namespace PayrollMgmt.ChildForms {
 
         private void WeekStartInput_ValueChanged(object sender, EventArgs e) {
             WeekEndInput.Value = WeekStartInput.Value.AddDays(6);
+        }
+
+        private void TimeDataTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
+            DataGridViewRow SelectedRow = TimeDataTable.CurrentRow;
+
+            if (!(SelectedRow.Index == TimeDataTable.NewRowIndex)) {
+                update = true;
+
+                WeekStartInput.Enabled = false;
+                WeekEndInput.Enabled = false;
+
+                WeekStartInput.Value = (DateTime)SelectedRow.Cells["WeekStart"].Value;
+                WeekEndInput.Value = (DateTime)SelectedRow.Cells["WeekEnd"].Value;
+                TotalHoursInput.Value = (decimal)((double)SelectedRow.Cells["TotalHours"].Value);
+
+                SubmitButton.Text = "Update";
+            } else {
+                update = false;
+
+                WeekStartInput.Enabled = true;
+                WeekEndInput.Enabled = false;
+
+                WeekStartInput.Value = DateTime.Today;
+                WeekEndInput.Value = DateTime.Today.AddDays(6);
+                TotalHoursInput.Value = (decimal)0.0;
+
+                SubmitButton.Text = "Add New";
+            }
         }
     }
 }
