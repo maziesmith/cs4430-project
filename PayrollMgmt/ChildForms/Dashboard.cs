@@ -39,6 +39,7 @@ namespace PayrollMgmt {
             while (ResultReader.Read()) {
                 DeptInput.Items.Add(new ComboBoxItem(ResultReader.GetString(0), ResultReader.GetInt32(1)));
                 ViewDeptEmpInput.Items.Add(new ComboBoxItem(ResultReader.GetString(0), ResultReader.GetInt32(1)));
+                PayDeptInput.Items.Add(new ComboBoxItem(ResultReader.GetString(0), ResultReader.GetInt32(1)));
             }
 
             dbConn.conn.Close();
@@ -129,6 +130,24 @@ namespace PayrollMgmt {
                 employeesDepartment.Show();
                 this.Close();
             }
+        }
+
+        private void PayDeptInput_SelectedIndexChanged(object sender, EventArgs e) {
+            dbConn.conn.Open();
+            string queryEmployees = "SELECT EmployeeID, CONCAT(LastName, ', ', FirstName) AS Name FROM employees NATURAL JOIN jobs WHERE DepartmentID = @did";
+
+            PayEmpInput.Items.Clear();
+
+            MySqlCommand command = new MySqlCommand(queryEmployees, dbConn.conn);
+            command.Prepare();
+            command.Parameters.AddWithValue("@did", (PayDeptInput.SelectedItem as ComboBoxItem).Value);
+            MySqlDataReader ResultsReader = command.ExecuteReader();
+
+            while (ResultsReader.Read()) {
+                PayEmpInput.Items.Add(new ComboBoxItem(ResultsReader.GetString(1), ResultsReader.GetInt32(0)));
+            }
+
+            dbConn.conn.Close();
         }
     }
 }
