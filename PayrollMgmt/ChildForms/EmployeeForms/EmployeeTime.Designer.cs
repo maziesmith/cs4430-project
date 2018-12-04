@@ -175,6 +175,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeIDInput.Enabled = false;
             this.EmployeeIDInput.Location = new System.Drawing.Point(3, 41);
+            this.EmployeeIDInput.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.EmployeeIDInput.Name = "EmployeeIDInput";
             this.EmployeeIDInput.Size = new System.Drawing.Size(228, 20);
             this.EmployeeIDInput.TabIndex = 7;

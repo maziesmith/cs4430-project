@@ -104,6 +104,7 @@ namespace PayrollMgmt.ChildForms {
         private void TimeDataTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             DataGridViewRow SelectedRow = TimeDataTable.CurrentRow;
 
+
             if (!(SelectedRow.Index == TimeDataTable.NewRowIndex)) {
                 update = true;
 

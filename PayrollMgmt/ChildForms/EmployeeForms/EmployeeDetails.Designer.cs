@@ -49,7 +49,9 @@
             this.HireDateTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.HireDateLabel = new System.Windows.Forms.Label();
             this.HireDateInput = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.UpdateButton = new System.Windows.Forms.Button();
+            this.EnableEditButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.DetailsGroup.SuspendLayout();
             this.PersonalTableContainer.SuspendLayout();
@@ -61,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ZipInput)).BeginInit();
             this.PhoneTableContainer.SuspendLayout();
             this.HireDateTableContainer.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,7 +71,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.DetailsGroup, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.UpdateButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -440,15 +443,43 @@
             this.HireDateInput.Size = new System.Drawing.Size(776, 20);
             this.HireDateInput.TabIndex = 1;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.UpdateButton, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.EnableEditButton, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 401);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 46);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
             // UpdateButton
             // 
             this.UpdateButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.UpdateButton.Location = new System.Drawing.Point(350, 412);
+            this.UpdateButton.Enabled = false;
+            this.UpdateButton.Location = new System.Drawing.Point(546, 11);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(99, 23);
-            this.UpdateButton.TabIndex = 3;
+            this.UpdateButton.TabIndex = 4;
             this.UpdateButton.Text = "Update Details";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // EnableEditButton
+            // 
+            this.EnableEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EnableEditButton.Location = new System.Drawing.Point(154, 11);
+            this.EnableEditButton.Name = "EnableEditButton";
+            this.EnableEditButton.Size = new System.Drawing.Size(89, 23);
+            this.EnableEditButton.TabIndex = 5;
+            this.EnableEditButton.Text = "Enable Editing";
+            this.EnableEditButton.UseVisualStyleBackColor = true;
+            this.EnableEditButton.Click += new System.EventHandler(this.EnableEditButton_Click);
             // 
             // EmployeeDetails
             // 
@@ -477,6 +508,7 @@
             this.PhoneTableContainer.PerformLayout();
             this.HireDateTableContainer.ResumeLayout(false);
             this.HireDateTableContainer.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -509,6 +541,8 @@
         private System.Windows.Forms.TableLayoutPanel HireDateTableContainer;
         private System.Windows.Forms.Label HireDateLabel;
         private System.Windows.Forms.DateTimePicker HireDateInput;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button EnableEditButton;
     }
 }

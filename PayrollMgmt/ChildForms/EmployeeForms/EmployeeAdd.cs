@@ -74,10 +74,10 @@ namespace PayrollMgmt.ChildForms {
             }
             if(JobInput.SelectedItem == null) {
                 MessageBox.Show(
-                                    "You have left a field empty, please fill out all fields.",
-                                    "Input Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    "You have left a field empty, please fill out all fields.",
+                    "Input Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
 

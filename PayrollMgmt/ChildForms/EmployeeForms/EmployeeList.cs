@@ -28,7 +28,9 @@ namespace PayrollMgmt.ChildForms.EmployeeForms {
                 "OR Street LIKE @search " +
                 "OR State LIKE @search " +
                 "OR Phone LIKE @search " +
-                "OR City LIKE @search";
+                "OR City LIKE @search " +
+                "OR Zip LiKE @search";
+
             DataTable ResultTable = new DataTable();
             MySqlCommand command = new MySqlCommand(queryTime, database.conn);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
