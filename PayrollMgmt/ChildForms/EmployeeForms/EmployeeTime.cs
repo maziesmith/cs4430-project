@@ -22,17 +22,17 @@ namespace PayrollMgmt.ChildForms {
             this.ID = id;
 
             EmployeeIDInput.Value = this.ID;
-            TimeDataTable.DataSource = PopulateDatatable(id);
+            TimeDataTable.DataSource = PopulateDatatable();
         }
 
-        private DataTable PopulateDatatable(int id) {
+        private DataTable PopulateDatatable() {
             string queryTime = "SELECT LastName, FirstName, WeekStart, WeekEnd, TotalHours " +
                 "FROM weeklyhours NATURAL JOIN employees WHERE EmployeeID = @eid";
             DataTable ResultTable = new DataTable();
             MySqlCommand command = new MySqlCommand(queryTime, database.conn);
             MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
 
-            command.Parameters.AddWithValue("@eid", id);
+            command.Parameters.AddWithValue("@eid", this.ID);
             command.CommandType = CommandType.Text;
             dataAdapter.SelectCommand = command;
 
@@ -78,7 +78,7 @@ namespace PayrollMgmt.ChildForms {
                 database.conn.Close();
             }
 
-            TimeDataTable.DataSource = PopulateDatatable(this.ID);
+            TimeDataTable.DataSource = PopulateDatatable();
         }
 
         private void UpdateCurrentRow(DateTime start, DateTime end, decimal hours) {
@@ -94,7 +94,7 @@ namespace PayrollMgmt.ChildForms {
             command.ExecuteNonQuery();
 
             database.conn.Close();
-            TimeDataTable.DataSource = PopulateDatatable(this.ID);
+            TimeDataTable.DataSource = PopulateDatatable();
         }
 
         private void WeekStartInput_ValueChanged(object sender, EventArgs e) {

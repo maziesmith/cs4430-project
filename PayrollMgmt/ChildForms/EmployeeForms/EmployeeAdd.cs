@@ -21,6 +21,54 @@ namespace PayrollMgmt.ChildForms {
             this.DeptID = deptID;
 
             PopulateJobInput();
+            PopulateHolidayInput();
+            PopulateDeductionInput();
+            PopulateBonusInput();
+        }
+
+        private void PopulateBonusInput() {
+            string queryBonus = "SELECT BonusType, BonusTitle FROM bonustypes";
+
+            database.conn.Open();
+            MySqlCommand command = new MySqlCommand(queryBonus, database.conn);
+            command.Prepare();
+            MySqlDataReader ResultReader = command.ExecuteReader();
+
+            while (ResultReader.Read()) {
+                BonusesInput.Items.Add(new ComboBoxItem(ResultReader.GetString(1), ResultReader.GetInt32(0)));
+            }
+
+            database.conn.Close();
+        }
+
+        private void PopulateDeductionInput() {
+            string queryDeduction = "SELECT DeductionType, DeductionName FROM deductiontypes";
+
+            database.conn.Open();
+            MySqlCommand command = new MySqlCommand(queryDeduction, database.conn);
+            command.Prepare();
+            MySqlDataReader ResultReader = command.ExecuteReader();
+
+            while (ResultReader.Read()) {
+                DeductionsInput.Items.Add(new ComboBoxItem(ResultReader.GetString(1), ResultReader.GetInt32(0)));
+            }
+
+            database.conn.Close();
+        }
+
+        private void PopulateHolidayInput() {
+            string queryHoliday = "SELECT HolidayType, HolidayName FROM holidaytypes";
+
+            database.conn.Open();
+            MySqlCommand command = new MySqlCommand(queryHoliday, database.conn);
+            command.Prepare();
+            MySqlDataReader ResultReader = command.ExecuteReader();
+
+            while (ResultReader.Read()) {
+                HolidayInput.Items.Add(new ComboBoxItem(ResultReader.GetString(1), ResultReader.GetInt32(0)));
+            }
+
+            database.conn.Close();
         }
 
         private void PopulateJobInput() {
@@ -72,6 +120,7 @@ namespace PayrollMgmt.ChildForms {
                     }
                 }
             }
+
             if(JobInput.SelectedItem == null) {
                 MessageBox.Show(
                     "You have left a field empty, please fill out all fields.",
@@ -81,10 +130,61 @@ namespace PayrollMgmt.ChildForms {
                 return;
             }
 
-            AddEmployee();
+            int generatedKey = AddEmployee();
+            AddEmployeeHolidays(generatedKey);
+            AddEmployeeDeducions(generatedKey);
+            AddEmployeeBonuses(generatedKey);
         }
 
-        private void AddEmployee() {
+        private void AddEmployeeBonuses(int generatedKey) {
+            database.conn.Open();
+            string queryBonuses = "INSERT INTO bonues (EmployeeID, BonusType) VALUES (@eid, @type)";
+
+            MySqlCommand command = new MySqlCommand(queryBonuses, database.conn);
+            command.Prepare();
+            command.Parameters.AddWithValue("@eid", generatedKey);
+
+            foreach(ComboBoxItem currentItem in BonusesInput.SelectedItems) {
+                command.Parameters.AddWithValue("@type", currentItem.Value);
+                command.ExecuteNonQuery();
+            }
+
+            database.conn.Close();
+        }
+
+        private void AddEmployeeDeducions(int generatedKey) {
+            database.conn.Open();
+            string queryBonuses = "INSERT INTO deductions (EmployeeID, DeductionType) VALUES (@eid, @type)";
+
+            MySqlCommand command = new MySqlCommand(queryBonuses, database.conn);
+            command.Prepare();
+            command.Parameters.AddWithValue("@eid", generatedKey);
+
+            foreach (ComboBoxItem currentItem in DeductionsInput.SelectedItems) {
+                command.Parameters.AddWithValue("@type", currentItem.Value);
+                command.ExecuteNonQuery();
+            }
+
+            database.conn.Close();
+        }
+
+        private void AddEmployeeHolidays(int generatedKey) {
+            database.conn.Open();
+            string queryBonuses = "INSERT INTO holidays (EmployeeID, HolidayType) VALUES (@eid, @type)";
+
+            MySqlCommand command = new MySqlCommand(queryBonuses, database.conn);
+            command.Prepare();
+            command.Parameters.AddWithValue("@eid", generatedKey);
+
+            foreach (ComboBoxItem currentItem in HolidayInput.SelectedItems) {
+                command.Parameters.AddWithValue("@type", currentItem.Value);
+                command.ExecuteNonQuery();
+            }
+
+            database.conn.Close();
+        }
+
+        private int AddEmployee() {
             string queryEmployees = "INSERT INTO employees (FirstName, LastName," +
                 "JobID, Street, City, State, Zip, Phone, HireDate) VALUES " +
                 "(@fname, @lname, @id, @street, @city, @state, @zip, @phone, @hiredate)";
@@ -104,13 +204,15 @@ namespace PayrollMgmt.ChildForms {
 
             command.ExecuteNonQuery();
 
-            // string queryNewKey = "SELECT @@Identity";
+            string queryNewKey = "SELECT @@Identity";
             //TODO Will need to find way to return ID of new employee that was recently inserted
-            // command.CommandText = queryNewKey;
-            // var key = command.ExecuteScalar();
-            // MessageBox.Show(key.ToString());
+            command.CommandText = queryNewKey;
+            command.CommandType = CommandType.Text;
+            var key = command.ExecuteScalar();
 
             database.conn.Close();
+
+            return Convert.ToInt32(key);
         }
     }
 }

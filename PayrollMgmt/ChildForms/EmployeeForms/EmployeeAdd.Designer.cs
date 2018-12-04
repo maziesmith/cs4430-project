@@ -52,14 +52,14 @@
             this.JobGroup = new System.Windows.Forms.GroupBox();
             this.JobDetailsTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.BonusTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.BonusesInput = new System.Windows.Forms.CheckedListBox();
             this.BonusLabel = new System.Windows.Forms.Label();
-            this.BonusInput = new System.Windows.Forms.ComboBox();
             this.DeductionTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.DeductionsInput = new System.Windows.Forms.CheckedListBox();
             this.DeductionLabel = new System.Windows.Forms.Label();
-            this.DeductionInput = new System.Windows.Forms.ComboBox();
             this.HoldiayTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.HolidayLabel = new System.Windows.Forms.Label();
-            this.HolidayInput = new System.Windows.Forms.ComboBox();
+            this.HolidayInput = new System.Windows.Forms.CheckedListBox();
             this.JobTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.JobInput = new System.Windows.Forms.ComboBox();
             this.JobLabel = new System.Windows.Forms.Label();
@@ -107,7 +107,7 @@
             this.DetailsGroup.Size = new System.Drawing.Size(394, 444);
             this.DetailsGroup.TabIndex = 0;
             this.DetailsGroup.TabStop = false;
-            this.DetailsGroup.Text = "v";
+            this.DetailsGroup.Text = "Personal Details";
             // 
             // PersonalTableContainer
             // 
@@ -488,8 +488,8 @@
             // 
             this.BonusTableContainer.ColumnCount = 1;
             this.BonusTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.BonusTableContainer.Controls.Add(this.BonusesInput, 0, 1);
             this.BonusTableContainer.Controls.Add(this.BonusLabel, 0, 0);
-            this.BonusTableContainer.Controls.Add(this.BonusInput, 0, 1);
             this.BonusTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BonusTableContainer.Location = new System.Drawing.Point(3, 255);
             this.BonusTableContainer.Name = "BonusTableContainer";
@@ -499,6 +499,16 @@
             this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.BonusTableContainer.Size = new System.Drawing.Size(382, 78);
             this.BonusTableContainer.TabIndex = 3;
+            // 
+            // BonusesInput
+            // 
+            this.BonusesInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BonusesInput.FormattingEnabled = true;
+            this.BonusesInput.Location = new System.Drawing.Point(3, 26);
+            this.BonusesInput.MultiColumn = true;
+            this.BonusesInput.Name = "BonusesInput";
+            this.BonusesInput.Size = new System.Drawing.Size(376, 49);
+            this.BonusesInput.TabIndex = 5;
             // 
             // BonusLabel
             // 
@@ -510,22 +520,12 @@
             this.BonusLabel.TabIndex = 4;
             this.BonusLabel.Text = "Bonuses";
             // 
-            // BonusInput
-            // 
-            this.BonusInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BonusInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BonusInput.FormattingEnabled = true;
-            this.BonusInput.Location = new System.Drawing.Point(3, 40);
-            this.BonusInput.Name = "BonusInput";
-            this.BonusInput.Size = new System.Drawing.Size(376, 21);
-            this.BonusInput.TabIndex = 1;
-            // 
             // DeductionTableContainer
             // 
             this.DeductionTableContainer.ColumnCount = 1;
             this.DeductionTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.DeductionTableContainer.Controls.Add(this.DeductionsInput, 0, 1);
             this.DeductionTableContainer.Controls.Add(this.DeductionLabel, 0, 0);
-            this.DeductionTableContainer.Controls.Add(this.DeductionInput, 0, 1);
             this.DeductionTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DeductionTableContainer.Location = new System.Drawing.Point(3, 171);
             this.DeductionTableContainer.Name = "DeductionTableContainer";
@@ -534,6 +534,16 @@
             this.DeductionTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.DeductionTableContainer.Size = new System.Drawing.Size(382, 78);
             this.DeductionTableContainer.TabIndex = 2;
+            // 
+            // DeductionsInput
+            // 
+            this.DeductionsInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeductionsInput.FormattingEnabled = true;
+            this.DeductionsInput.Location = new System.Drawing.Point(3, 26);
+            this.DeductionsInput.MultiColumn = true;
+            this.DeductionsInput.Name = "DeductionsInput";
+            this.DeductionsInput.Size = new System.Drawing.Size(376, 49);
+            this.DeductionsInput.TabIndex = 4;
             // 
             // DeductionLabel
             // 
@@ -544,16 +554,6 @@
             this.DeductionLabel.Size = new System.Drawing.Size(61, 13);
             this.DeductionLabel.TabIndex = 2;
             this.DeductionLabel.Text = "Deductions";
-            // 
-            // DeductionInput
-            // 
-            this.DeductionInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeductionInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DeductionInput.FormattingEnabled = true;
-            this.DeductionInput.Location = new System.Drawing.Point(3, 40);
-            this.DeductionInput.Name = "DeductionInput";
-            this.DeductionInput.Size = new System.Drawing.Size(376, 21);
-            this.DeductionInput.TabIndex = 1;
             // 
             // HoldiayTableContainer
             // 
@@ -583,13 +583,13 @@
             // 
             // HolidayInput
             // 
-            this.HolidayInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.HolidayInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.HolidayInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HolidayInput.FormattingEnabled = true;
-            this.HolidayInput.Location = new System.Drawing.Point(3, 40);
+            this.HolidayInput.Location = new System.Drawing.Point(3, 26);
+            this.HolidayInput.MultiColumn = true;
             this.HolidayInput.Name = "HolidayInput";
-            this.HolidayInput.Size = new System.Drawing.Size(376, 21);
-            this.HolidayInput.TabIndex = 1;
+            this.HolidayInput.Size = new System.Drawing.Size(376, 49);
+            this.HolidayInput.TabIndex = 3;
             // 
             // JobTableContainer
             // 
@@ -712,14 +712,14 @@
         private System.Windows.Forms.TableLayoutPanel HoldiayTableContainer;
         private System.Windows.Forms.TableLayoutPanel JobTableContainer;
         private System.Windows.Forms.Label BonusLabel;
-        private System.Windows.Forms.ComboBox BonusInput;
         private System.Windows.Forms.Label DeductionLabel;
-        private System.Windows.Forms.ComboBox DeductionInput;
-        private System.Windows.Forms.ComboBox HolidayInput;
         private System.Windows.Forms.ComboBox JobInput;
         private System.Windows.Forms.Label JobLabel;
         private System.Windows.Forms.Label HolidayLabel;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.TextBox PhoneInput;
+        private System.Windows.Forms.CheckedListBox BonusesInput;
+        private System.Windows.Forms.CheckedListBox DeductionsInput;
+        private System.Windows.Forms.CheckedListBox HolidayInput;
     }
 }
