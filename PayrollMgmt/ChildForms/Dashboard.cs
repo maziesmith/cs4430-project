@@ -57,7 +57,7 @@ namespace PayrollMgmt {
 
         private void ViewEmployee_button_Click (object sender, EventArgs e) {
             try {
-                EmployeeDetails detailsEmployee = new EmployeeDetails(Int32.Parse(this.employeeDetailsID.Text)) {
+                EmployeeDetails detailsEmployee = new EmployeeDetails(Int32.Parse(this.EmployeeDetailsID.Text)) {
                     MdiParent = this.dashParent,
                     WindowState = FormWindowState.Maximized
                 };

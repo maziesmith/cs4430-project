@@ -25,33 +25,31 @@
         private void InitializeComponent () {
             this.MainTable = new System.Windows.Forms.TableLayoutPanel();
             this.PayrollGroup = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.TopTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeGroup = new System.Windows.Forms.GroupBox();
             this.EmployeeTable = new System.Windows.Forms.TableLayoutPanel();
             this.DeptInput = new System.Windows.Forms.ComboBox();
             this.AddEmployee_button = new System.Windows.Forms.Button();
             this.TimeEmployee_button = new System.Windows.Forms.Button();
             this.ViewEmployee_button = new System.Windows.Forms.Button();
-            this.addLabel = new System.Windows.Forms.Label();
-            this.timeLabel = new System.Windows.Forms.Label();
+            this.AddLabel = new System.Windows.Forms.Label();
+            this.TimeLabel = new System.Windows.Forms.Label();
             this.viewLabel = new System.Windows.Forms.Label();
             this.employeeTimeID = new System.Windows.Forms.TextBox();
-            this.employeeDetailsID = new System.Windows.Forms.TextBox();
+            this.EmployeeDetailsID = new System.Windows.Forms.TextBox();
             this.JobsAndDeptGroup = new System.Windows.Forms.GroupBox();
-            this.eventLog1 = new System.Diagnostics.EventLog();
             this.DepartmentTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.ViewDepartmentLabel = new System.Windows.Forms.Label();
             this.ViewDeptEmpLabel = new System.Windows.Forms.Label();
             this.ViewDeptEmpTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.ViewDeptEmpInput = new System.Windows.Forms.ComboBox();
             this.ViewDeptEmpButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ViewDepartmentButton = new System.Windows.Forms.Button();
             this.MainTable.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.TopTableContainer.SuspendLayout();
             this.EmployeeGroup.SuspendLayout();
             this.EmployeeTable.SuspendLayout();
             this.JobsAndDeptGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.DepartmentTableContainer.SuspendLayout();
             this.ViewDeptEmpTableContainer.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +62,7 @@
             this.MainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.MainTable.Controls.Add(this.PayrollGroup, 0, 1);
-            this.MainTable.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.MainTable.Controls.Add(this.TopTableContainer, 0, 0);
             this.MainTable.Location = new System.Drawing.Point(0, 0);
             this.MainTable.Name = "MainTable";
             this.MainTable.RowCount = 2;
@@ -83,20 +81,20 @@
             this.PayrollGroup.TabStop = false;
             this.PayrollGroup.Text = "Payroll";
             // 
-            // tableLayoutPanel1
+            // TopTableContainer
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.EmployeeGroup, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.JobsAndDeptGroup, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 219);
-            this.tableLayoutPanel1.TabIndex = 3;
+            this.TopTableContainer.ColumnCount = 2;
+            this.TopTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TopTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TopTableContainer.Controls.Add(this.EmployeeGroup, 0, 0);
+            this.TopTableContainer.Controls.Add(this.JobsAndDeptGroup, 0, 0);
+            this.TopTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TopTableContainer.Location = new System.Drawing.Point(3, 3);
+            this.TopTableContainer.Name = "TopTableContainer";
+            this.TopTableContainer.RowCount = 1;
+            this.TopTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TopTableContainer.Size = new System.Drawing.Size(794, 219);
+            this.TopTableContainer.TabIndex = 3;
             // 
             // EmployeeGroup
             // 
@@ -118,11 +116,11 @@
             this.EmployeeTable.Controls.Add(this.AddEmployee_button, 1, 1);
             this.EmployeeTable.Controls.Add(this.TimeEmployee_button, 1, 3);
             this.EmployeeTable.Controls.Add(this.ViewEmployee_button, 1, 5);
-            this.EmployeeTable.Controls.Add(this.addLabel, 0, 0);
-            this.EmployeeTable.Controls.Add(this.timeLabel, 0, 2);
+            this.EmployeeTable.Controls.Add(this.AddLabel, 0, 0);
+            this.EmployeeTable.Controls.Add(this.TimeLabel, 0, 2);
             this.EmployeeTable.Controls.Add(this.viewLabel, 0, 4);
             this.EmployeeTable.Controls.Add(this.employeeTimeID, 0, 3);
-            this.EmployeeTable.Controls.Add(this.employeeDetailsID, 0, 5);
+            this.EmployeeTable.Controls.Add(this.EmployeeDetailsID, 0, 5);
             this.EmployeeTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeTable.Location = new System.Drawing.Point(3, 16);
             this.EmployeeTable.Name = "EmployeeTable";
@@ -179,25 +177,25 @@
             this.ViewEmployee_button.UseVisualStyleBackColor = true;
             this.ViewEmployee_button.Click += new System.EventHandler(this.ViewEmployee_button_Click);
             // 
-            // addLabel
+            // AddLabel
             // 
-            this.addLabel.AutoSize = true;
-            this.addLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addLabel.Location = new System.Drawing.Point(3, 0);
-            this.addLabel.Name = "addLabel";
-            this.addLabel.Size = new System.Drawing.Size(263, 19);
-            this.addLabel.TabIndex = 3;
-            this.addLabel.Text = "Add New Employee";
+            this.AddLabel.AutoSize = true;
+            this.AddLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddLabel.Location = new System.Drawing.Point(3, 0);
+            this.AddLabel.Name = "AddLabel";
+            this.AddLabel.Size = new System.Drawing.Size(263, 19);
+            this.AddLabel.TabIndex = 3;
+            this.AddLabel.Text = "Add New Employee";
             // 
-            // timeLabel
+            // TimeLabel
             // 
-            this.timeLabel.AutoSize = true;
-            this.timeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeLabel.Location = new System.Drawing.Point(3, 64);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(263, 19);
-            this.timeLabel.TabIndex = 4;
-            this.timeLabel.Text = "View Employee Time";
+            this.TimeLabel.AutoSize = true;
+            this.TimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TimeLabel.Location = new System.Drawing.Point(3, 64);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(263, 19);
+            this.TimeLabel.TabIndex = 4;
+            this.TimeLabel.Text = "View Employee Time";
             // 
             // viewLabel
             // 
@@ -221,17 +219,17 @@
             this.employeeTimeID.Enter += new System.EventHandler(this.EmployeeID_Enter);
             this.employeeTimeID.Leave += new System.EventHandler(this.EmployeeID_Leave);
             // 
-            // employeeDetailsID
+            // EmployeeDetailsID
             // 
-            this.employeeDetailsID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.employeeDetailsID.ForeColor = System.Drawing.Color.Gray;
-            this.employeeDetailsID.Location = new System.Drawing.Point(3, 160);
-            this.employeeDetailsID.Name = "employeeDetailsID";
-            this.employeeDetailsID.Size = new System.Drawing.Size(263, 20);
-            this.employeeDetailsID.TabIndex = 6;
-            this.employeeDetailsID.Text = "Employee ID";
-            this.employeeDetailsID.Enter += new System.EventHandler(this.EmployeeID_Enter);
-            this.employeeDetailsID.Leave += new System.EventHandler(this.EmployeeID_Leave);
+            this.EmployeeDetailsID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeeDetailsID.ForeColor = System.Drawing.Color.Gray;
+            this.EmployeeDetailsID.Location = new System.Drawing.Point(3, 160);
+            this.EmployeeDetailsID.Name = "EmployeeDetailsID";
+            this.EmployeeDetailsID.Size = new System.Drawing.Size(263, 20);
+            this.EmployeeDetailsID.TabIndex = 6;
+            this.EmployeeDetailsID.Text = "Employee ID";
+            this.EmployeeDetailsID.Enter += new System.EventHandler(this.EmployeeID_Enter);
+            this.EmployeeDetailsID.Leave += new System.EventHandler(this.EmployeeID_Leave);
             // 
             // JobsAndDeptGroup
             // 
@@ -244,10 +242,6 @@
             this.JobsAndDeptGroup.TabStop = false;
             this.JobsAndDeptGroup.Text = "Jobs and Departments";
             // 
-            // eventLog1
-            // 
-            this.eventLog1.SynchronizingObject = this;
-            // 
             // DepartmentTableContainer
             // 
             this.DepartmentTableContainer.ColumnCount = 1;
@@ -255,7 +249,7 @@
             this.DepartmentTableContainer.Controls.Add(this.ViewDepartmentLabel, 0, 0);
             this.DepartmentTableContainer.Controls.Add(this.ViewDeptEmpLabel, 0, 2);
             this.DepartmentTableContainer.Controls.Add(this.ViewDeptEmpTableContainer, 0, 3);
-            this.DepartmentTableContainer.Controls.Add(this.button1, 0, 1);
+            this.DepartmentTableContainer.Controls.Add(this.ViewDepartmentButton, 0, 1);
             this.DepartmentTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DepartmentTableContainer.Location = new System.Drawing.Point(3, 16);
             this.DepartmentTableContainer.Name = "DepartmentTableContainer";
@@ -322,15 +316,15 @@
             this.ViewDeptEmpButton.Text = "View";
             this.ViewDeptEmpButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ViewDepartmentButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Location = new System.Drawing.Point(134, 51);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 42);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "View Departments";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ViewDepartmentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ViewDepartmentButton.Location = new System.Drawing.Point(134, 51);
+            this.ViewDepartmentButton.Name = "ViewDepartmentButton";
+            this.ViewDepartmentButton.Size = new System.Drawing.Size(117, 42);
+            this.ViewDepartmentButton.TabIndex = 3;
+            this.ViewDepartmentButton.Text = "View Departments";
+            this.ViewDepartmentButton.UseVisualStyleBackColor = true;
             // 
             // Dashboard
             // 
@@ -342,12 +336,11 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.MainTable.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.TopTableContainer.ResumeLayout(false);
             this.EmployeeGroup.ResumeLayout(false);
             this.EmployeeTable.ResumeLayout(false);
             this.EmployeeTable.PerformLayout();
             this.JobsAndDeptGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.DepartmentTableContainer.ResumeLayout(false);
             this.DepartmentTableContainer.PerformLayout();
             this.ViewDeptEmpTableContainer.ResumeLayout(false);
@@ -358,19 +351,18 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel MainTable;
-        private System.Diagnostics.EventLog eventLog1;
         private System.Windows.Forms.GroupBox PayrollGroup;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel TopTableContainer;
         private System.Windows.Forms.GroupBox EmployeeGroup;
         private System.Windows.Forms.TableLayoutPanel EmployeeTable;
         private System.Windows.Forms.Button AddEmployee_button;
         private System.Windows.Forms.Button TimeEmployee_button;
         private System.Windows.Forms.Button ViewEmployee_button;
-        private System.Windows.Forms.Label addLabel;
-        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label AddLabel;
+        private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label viewLabel;
         private System.Windows.Forms.TextBox employeeTimeID;
-        private System.Windows.Forms.TextBox employeeDetailsID;
+        private System.Windows.Forms.TextBox EmployeeDetailsID;
         private System.Windows.Forms.GroupBox JobsAndDeptGroup;
         private System.Windows.Forms.ComboBox DeptInput;
         private System.Windows.Forms.TableLayoutPanel DepartmentTableContainer;
@@ -379,6 +371,6 @@
         private System.Windows.Forms.TableLayoutPanel ViewDeptEmpTableContainer;
         private System.Windows.Forms.ComboBox ViewDeptEmpInput;
         private System.Windows.Forms.Button ViewDeptEmpButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ViewDepartmentButton;
     }
 }
