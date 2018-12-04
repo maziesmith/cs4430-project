@@ -57,6 +57,12 @@
     <Compile Include="ChildForms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentDetails.Designer.cs">
+      <DependentUpon>DepartmentDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\DepartmentForms\DepartmentEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,15 @@
     <Compile Include="Utils\ComboBoxItem.cs" />
     <EmbeddedResource Include="ChildForms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DepartmentForms\DepartmentDetails.resx">
+      <DependentUpon>DepartmentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DepartmentForms\DepartmentEmployees.resx">
+      <DependentUpon>DepartmentEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DepartmentForms\DepartmentView.resx">
+      <DependentUpon>DepartmentView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeAdd.resx">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>

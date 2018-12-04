@@ -49,12 +49,14 @@ namespace PayrollMgmt.ChildForms.EmployeeForms {
         private void EmployeeDataTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e) {
             DataGridViewRow SelectedRow = EmployeeDataTable.CurrentRow;
 
-            EmployeeDetails detailsEmployee = new EmployeeDetails((int)SelectedRow.Cells["EmployeeID"].Value) {
-                MdiParent = this.MdiParent,
-                WindowState = FormWindowState.Maximized
-            };
-            detailsEmployee.Show();
-            this.Close();
+            if(SelectedRow.Index != EmployeeDataTable.NewRowIndex){
+                EmployeeDetails detailsEmployee = new EmployeeDetails((int)SelectedRow.Cells["EmployeeID"].Value) {
+                    MdiParent = this.MdiParent,
+                    WindowState = FormWindowState.Maximized
+                };
+                detailsEmployee.Show();
+                this.Close();
+            }
         }
     }
 }

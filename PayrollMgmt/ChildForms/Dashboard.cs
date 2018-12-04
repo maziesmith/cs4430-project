@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using PayrollMgmt.ChildForms;
+using PayrollMgmt.ChildForms.DepartmentForms;
 using PayrollMgmt.ChildForms.EmployeeForms;
 using PayrollMgmt.Utils;
 using System;
@@ -107,6 +108,27 @@ namespace PayrollMgmt {
                     currentSender.Text = "Employee ID";
                     currentSender.ForeColor = Color.Gray;
                 }
+            }
+        }
+
+        private void ViewDepartmentButton_Click(object sender, EventArgs e){
+            DepartmentView viewDepartment = new DepartmentView() {
+                MdiParent = this.dashParent,
+                WindowState = FormWindowState.Maximized
+            };
+            viewDepartment.Show();
+            this.Close();
+        }
+
+        private void ViewDeptEmpButton_Click(object sender, EventArgs e) {
+            if(ViewDeptEmpInput.SelectedItem != null) {
+
+            DepartmentEmployees employeesDepartment = new DepartmentEmployees((ViewDeptEmpInput.SelectedItem as ComboBoxItem).Value) {
+                MdiParent = this.dashParent,
+                WindowState = FormWindowState.Maximized
+            };
+            employeesDepartment.Show();
+            this.Close();
             }
         }
     }

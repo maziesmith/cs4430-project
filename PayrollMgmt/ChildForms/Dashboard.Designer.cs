@@ -312,6 +312,7 @@
             this.ViewDeptEmpButton.TabIndex = 4;
             this.ViewDeptEmpButton.Text = "View";
             this.ViewDeptEmpButton.UseVisualStyleBackColor = true;
+            this.ViewDeptEmpButton.Click += new System.EventHandler(this.ViewDeptEmpButton_Click);
             // 
             // ViewDepartmentButton
             // 
@@ -322,6 +323,7 @@
             this.ViewDepartmentButton.TabIndex = 3;
             this.ViewDepartmentButton.Text = "View Departments";
             this.ViewDepartmentButton.UseVisualStyleBackColor = true;
+            this.ViewDepartmentButton.Click += new System.EventHandler(this.ViewDepartmentButton_Click);
             // 
             // Dashboard
             // 
