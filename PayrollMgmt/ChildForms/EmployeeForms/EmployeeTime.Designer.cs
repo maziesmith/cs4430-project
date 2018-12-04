@@ -63,6 +63,7 @@
             this.TimeDataTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TimeDataTable.Location = new System.Drawing.Point(243, 3);
             this.TimeDataTable.Name = "TimeDataTable";
+            this.TimeDataTable.ReadOnly = true;
             this.TimeDataTable.Size = new System.Drawing.Size(554, 444);
             this.TimeDataTable.TabIndex = 0;
             this.TimeDataTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TimeDataTable_CellMouseClick);
@@ -105,11 +106,13 @@
             this.WeekStartInput.Name = "WeekStartInput";
             this.WeekStartInput.Size = new System.Drawing.Size(228, 20);
             this.WeekStartInput.TabIndex = 0;
+            this.WeekStartInput.ValueChanged += new System.EventHandler(this.WeekStartInput_ValueChanged);
             // 
             // WeekEndInput
             // 
             this.WeekEndInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.WeekEndInput.Enabled = false;
             this.WeekEndInput.Location = new System.Drawing.Point(3, 169);
             this.WeekEndInput.Name = "WeekEndInput";
             this.WeekEndInput.Size = new System.Drawing.Size(228, 20);
@@ -170,6 +173,7 @@
             // 
             this.EmployeeIDInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.EmployeeIDInput.Enabled = false;
             this.EmployeeIDInput.Location = new System.Drawing.Point(3, 41);
             this.EmployeeIDInput.Name = "EmployeeIDInput";
             this.EmployeeIDInput.Size = new System.Drawing.Size(228, 20);

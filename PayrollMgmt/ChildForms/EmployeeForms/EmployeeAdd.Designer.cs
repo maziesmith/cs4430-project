@@ -52,17 +52,17 @@
             this.JobGroup = new System.Windows.Forms.GroupBox();
             this.JobDetailsTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.BonusTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.DeductionTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.HoldiayTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.JobTableContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.HolidayInput = new System.Windows.Forms.ComboBox();
-            this.DeductionInput = new System.Windows.Forms.ComboBox();
+            this.BonusLabel = new System.Windows.Forms.Label();
             this.BonusInput = new System.Windows.Forms.ComboBox();
+            this.DeductionTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.DeductionLabel = new System.Windows.Forms.Label();
+            this.DeductionInput = new System.Windows.Forms.ComboBox();
+            this.HoldiayTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.HolidayLabel = new System.Windows.Forms.Label();
+            this.HolidayInput = new System.Windows.Forms.ComboBox();
+            this.JobTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.JobInput = new System.Windows.Forms.ComboBox();
             this.JobLabel = new System.Windows.Forms.Label();
-            this.DeductionLabel = new System.Windows.Forms.Label();
-            this.BonusLabel = new System.Windows.Forms.Label();
-            this.HolidayLabel = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
             this.ParentTableContainer.SuspendLayout();
             this.DetailsGroup.SuspendLayout();
@@ -440,6 +440,25 @@
             this.BonusTableContainer.Size = new System.Drawing.Size(382, 78);
             this.BonusTableContainer.TabIndex = 3;
             // 
+            // BonusLabel
+            // 
+            this.BonusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BonusLabel.AutoSize = true;
+            this.BonusLabel.Location = new System.Drawing.Point(3, 10);
+            this.BonusLabel.Name = "BonusLabel";
+            this.BonusLabel.Size = new System.Drawing.Size(48, 13);
+            this.BonusLabel.TabIndex = 4;
+            this.BonusLabel.Text = "Bonuses";
+            // 
+            // BonusInput
+            // 
+            this.BonusInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BonusInput.FormattingEnabled = true;
+            this.BonusInput.Location = new System.Drawing.Point(3, 40);
+            this.BonusInput.Name = "BonusInput";
+            this.BonusInput.Size = new System.Drawing.Size(376, 21);
+            this.BonusInput.TabIndex = 1;
+            // 
             // DeductionTableContainer
             // 
             this.DeductionTableContainer.ColumnCount = 1;
@@ -454,6 +473,25 @@
             this.DeductionTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.DeductionTableContainer.Size = new System.Drawing.Size(382, 78);
             this.DeductionTableContainer.TabIndex = 2;
+            // 
+            // DeductionLabel
+            // 
+            this.DeductionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeductionLabel.AutoSize = true;
+            this.DeductionLabel.Location = new System.Drawing.Point(3, 10);
+            this.DeductionLabel.Name = "DeductionLabel";
+            this.DeductionLabel.Size = new System.Drawing.Size(61, 13);
+            this.DeductionLabel.TabIndex = 2;
+            this.DeductionLabel.Text = "Deductions";
+            // 
+            // DeductionInput
+            // 
+            this.DeductionInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeductionInput.FormattingEnabled = true;
+            this.DeductionInput.Location = new System.Drawing.Point(3, 40);
+            this.DeductionInput.Name = "DeductionInput";
+            this.DeductionInput.Size = new System.Drawing.Size(376, 21);
+            this.DeductionInput.TabIndex = 1;
             // 
             // HoldiayTableContainer
             // 
@@ -471,6 +509,25 @@
             this.HoldiayTableContainer.Size = new System.Drawing.Size(382, 78);
             this.HoldiayTableContainer.TabIndex = 1;
             // 
+            // HolidayLabel
+            // 
+            this.HolidayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.HolidayLabel.AutoSize = true;
+            this.HolidayLabel.Location = new System.Drawing.Point(3, 10);
+            this.HolidayLabel.Name = "HolidayLabel";
+            this.HolidayLabel.Size = new System.Drawing.Size(47, 13);
+            this.HolidayLabel.TabIndex = 2;
+            this.HolidayLabel.Text = "Holidays";
+            // 
+            // HolidayInput
+            // 
+            this.HolidayInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HolidayInput.FormattingEnabled = true;
+            this.HolidayInput.Location = new System.Drawing.Point(3, 40);
+            this.HolidayInput.Name = "HolidayInput";
+            this.HolidayInput.Size = new System.Drawing.Size(376, 21);
+            this.HolidayInput.TabIndex = 1;
+            // 
             // JobTableContainer
             // 
             this.JobTableContainer.ColumnCount = 1;
@@ -485,33 +542,6 @@
             this.JobTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.JobTableContainer.Size = new System.Drawing.Size(382, 78);
             this.JobTableContainer.TabIndex = 0;
-            // 
-            // HolidayInput
-            // 
-            this.HolidayInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.HolidayInput.FormattingEnabled = true;
-            this.HolidayInput.Location = new System.Drawing.Point(3, 40);
-            this.HolidayInput.Name = "HolidayInput";
-            this.HolidayInput.Size = new System.Drawing.Size(376, 21);
-            this.HolidayInput.TabIndex = 1;
-            // 
-            // DeductionInput
-            // 
-            this.DeductionInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeductionInput.FormattingEnabled = true;
-            this.DeductionInput.Location = new System.Drawing.Point(3, 40);
-            this.DeductionInput.Name = "DeductionInput";
-            this.DeductionInput.Size = new System.Drawing.Size(376, 21);
-            this.DeductionInput.TabIndex = 1;
-            // 
-            // BonusInput
-            // 
-            this.BonusInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.BonusInput.FormattingEnabled = true;
-            this.BonusInput.Location = new System.Drawing.Point(3, 40);
-            this.BonusInput.Name = "BonusInput";
-            this.BonusInput.Size = new System.Drawing.Size(376, 21);
-            this.BonusInput.TabIndex = 1;
             // 
             // JobInput
             // 
@@ -532,36 +562,6 @@
             this.JobLabel.TabIndex = 1;
             this.JobLabel.Text = "Position";
             // 
-            // DeductionLabel
-            // 
-            this.DeductionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeductionLabel.AutoSize = true;
-            this.DeductionLabel.Location = new System.Drawing.Point(3, 10);
-            this.DeductionLabel.Name = "DeductionLabel";
-            this.DeductionLabel.Size = new System.Drawing.Size(61, 13);
-            this.DeductionLabel.TabIndex = 2;
-            this.DeductionLabel.Text = "Deductions";
-            // 
-            // BonusLabel
-            // 
-            this.BonusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BonusLabel.AutoSize = true;
-            this.BonusLabel.Location = new System.Drawing.Point(3, 10);
-            this.BonusLabel.Name = "BonusLabel";
-            this.BonusLabel.Size = new System.Drawing.Size(48, 13);
-            this.BonusLabel.TabIndex = 4;
-            this.BonusLabel.Text = "Bonuses";
-            // 
-            // HolidayLabel
-            // 
-            this.HolidayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.HolidayLabel.AutoSize = true;
-            this.HolidayLabel.Location = new System.Drawing.Point(3, 10);
-            this.HolidayLabel.Name = "HolidayLabel";
-            this.HolidayLabel.Size = new System.Drawing.Size(47, 13);
-            this.HolidayLabel.TabIndex = 2;
-            this.HolidayLabel.Text = "Holidays";
-            // 
             // SubmitButton
             // 
             this.SubmitButton.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -571,6 +571,7 @@
             this.SubmitButton.TabIndex = 4;
             this.SubmitButton.Text = "Add Employee";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // EmployeeAdd
             // 

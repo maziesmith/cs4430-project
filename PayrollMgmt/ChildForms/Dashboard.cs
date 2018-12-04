@@ -1,4 +1,5 @@
-﻿using PayrollMgmt.ChildForms;
+﻿using MySql.Data.MySqlClient;
+using PayrollMgmt.ChildForms;
 using PayrollMgmt.Utils;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,21 @@ namespace PayrollMgmt {
                 dashParent.StatusUpdate = "Connected to database successfully!";
             }
 
-            DeptInput.Items.Add(new ComboBoxItem("Information Technology", 1));
+            PopulateDeptInputs();
+        }
+
+        private void PopulateDeptInputs() {
+            dbConn.conn.Open();
+            string queryDepartments = "SELECT DepartmentName, DepartmentID FROM departments";
+            MySqlCommand command = new MySqlCommand(queryDepartments, dbConn.conn);
+            MySqlDataReader ResultReader = command.ExecuteReader();
+
+            while (ResultReader.Read()) {
+                DeptInput.Items.Add(new ComboBoxItem(ResultReader.GetString(0), ResultReader.GetInt32(1)));
+                ViewDeptEmpInput.Items.Add(new ComboBoxItem(ResultReader.GetString(0), ResultReader.GetInt32(1)));
+            }
+
+            dbConn.conn.Close();
         }
 
         private void AddEmployee_button_Click (object sender, EventArgs e) {

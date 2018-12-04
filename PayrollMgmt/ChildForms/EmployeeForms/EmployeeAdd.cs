@@ -16,5 +16,9 @@ namespace PayrollMgmt.ChildForms {
             InitializeComponent();
             this.database = PayrollDatabase.Instance;
         }
+
+        private void SubmitButton_Click(object sender, EventArgs e) {
+
+        }
     }
 }
