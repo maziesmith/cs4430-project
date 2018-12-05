@@ -35,6 +35,7 @@
             // 
             // managerList
             // 
+            this.managerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.managerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.managerList.Location = new System.Drawing.Point(12, 12);
             this.managerList.MultiSelect = false;

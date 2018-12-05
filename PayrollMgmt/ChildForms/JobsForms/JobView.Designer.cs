@@ -28,7 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.JobDataTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.JobDataTable)).BeginInit();
             this.SuspendLayout();
+            // 
+            // JobDataTable
+            // 
+            this.JobDataTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.JobDataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.JobDataTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.JobDataTable.Location = new System.Drawing.Point(0, 0);
+            this.JobDataTable.Name = "JobDataTable";
+            this.JobDataTable.ReadOnly = true;
+            this.JobDataTable.Size = new System.Drawing.Size(800, 450);
+            this.JobDataTable.TabIndex = 1;
+            this.JobDataTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.JobDataTable_CellDoubleClick);
             // 
             // JobView
             // 
@@ -36,12 +50,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.JobDataTable);
             this.Name = "JobView";
             this.Text = "JobView";
+            ((System.ComponentModel.ISupportInitialize)(this.JobDataTable)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView JobDataTable;
     }
 }

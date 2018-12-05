@@ -36,7 +36,7 @@ namespace PayrollMgmt.ChildForms.JobsForms
             else
             {
                 string queryTime = "INSERT INTO jobs (JobTitle, Pay, DepartmentID, JobDesription)" +
-                                    "VALUES ('" + jobName + "','" + jobPay + "','" + departmentID + "'," + jobDesc + ");";
+                                    "VALUES ('" + jobName + "'," + jobPay + "," + departmentID + ",'" + jobDesc + "');";
 
                 try
                 {
@@ -44,7 +44,7 @@ namespace PayrollMgmt.ChildForms.JobsForms
                     command.Connection.Open();
                     command.ExecuteNonQuery();
                     command.Connection.Close();
-                    MessageBox.Show("Department Created!");
+                    MessageBox.Show("Job Created!");
                     jName.Text = "";
                     jDescription.Text = "";
                     jPay.Text = "0.00";

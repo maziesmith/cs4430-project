@@ -46,6 +46,7 @@
             // 
             // departmentList
             // 
+            this.departmentList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.departmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.departmentList.Location = new System.Drawing.Point(11, 17);
             this.departmentList.MultiSelect = false;
