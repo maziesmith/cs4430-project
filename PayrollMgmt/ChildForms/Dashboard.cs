@@ -123,6 +123,17 @@ namespace PayrollMgmt {
             this.Close();
         }
 
+        private void ViewJobsButton_Click(object sender, EventArgs e)
+        {
+            JobView jobView = new JobView()
+            {
+                MdiParent = this.dashParent,
+                WindowState = FormWindowState.Maximized
+            };
+            jobView.Show();
+            this.Close();
+        }
+
         private void ViewDeptEmpButton_Click(object sender, EventArgs e) {
             if(ViewDeptEmpInput.SelectedItem != null) {
                 DepartmentEmployees employeesDepartment = new DepartmentEmployees((ViewDeptEmpInput.SelectedItem as ComboBoxItem).Value) {
@@ -174,5 +185,7 @@ namespace PayrollMgmt {
                 TimeEmployee_button_Click(this, new EventArgs());
             }
         }
+
+        
     }
 }

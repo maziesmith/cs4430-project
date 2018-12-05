@@ -49,10 +49,12 @@
             this.DepartmentTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.ViewDepartmentLabel = new System.Windows.Forms.Label();
             this.ViewDeptEmpLabel = new System.Windows.Forms.Label();
+            this.ViewDepartmentButton = new System.Windows.Forms.Button();
             this.ViewDeptEmpTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.ViewDeptEmpInput = new System.Windows.Forms.ComboBox();
             this.ViewDeptEmpButton = new System.Windows.Forms.Button();
-            this.ViewDepartmentButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ViewJobsButton = new System.Windows.Forms.Button();
             this.MainTable.SuspendLayout();
             this.PayrollGroup.SuspendLayout();
             this.PayrollTableContainer.SuspendLayout();
@@ -360,17 +362,21 @@
             this.DepartmentTableContainer.ColumnCount = 1;
             this.DepartmentTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.DepartmentTableContainer.Controls.Add(this.ViewDepartmentLabel, 0, 0);
-            this.DepartmentTableContainer.Controls.Add(this.ViewDeptEmpLabel, 0, 2);
-            this.DepartmentTableContainer.Controls.Add(this.ViewDeptEmpTableContainer, 0, 3);
+            this.DepartmentTableContainer.Controls.Add(this.ViewDeptEmpLabel, 0, 4);
             this.DepartmentTableContainer.Controls.Add(this.ViewDepartmentButton, 0, 1);
+            this.DepartmentTableContainer.Controls.Add(this.ViewDeptEmpTableContainer, 0, 5);
+            this.DepartmentTableContainer.Controls.Add(this.label1, 0, 2);
+            this.DepartmentTableContainer.Controls.Add(this.ViewJobsButton, 0, 3);
             this.DepartmentTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DepartmentTableContainer.Location = new System.Drawing.Point(3, 16);
             this.DepartmentTableContainer.Name = "DepartmentTableContainer";
-            this.DepartmentTableContainer.RowCount = 4;
-            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.DepartmentTableContainer.RowCount = 6;
+            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.86207F));
+            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.3252F));
+            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.89431F));
+            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.DepartmentTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.DepartmentTableContainer.Size = new System.Drawing.Size(385, 194);
             this.DepartmentTableContainer.TabIndex = 0;
             // 
@@ -378,7 +384,7 @@
             // 
             this.ViewDepartmentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ViewDepartmentLabel.AutoSize = true;
-            this.ViewDepartmentLabel.Location = new System.Drawing.Point(3, 35);
+            this.ViewDepartmentLabel.Location = new System.Drawing.Point(3, 6);
             this.ViewDepartmentLabel.Name = "ViewDepartmentLabel";
             this.ViewDepartmentLabel.Size = new System.Drawing.Size(93, 13);
             this.ViewDepartmentLabel.TabIndex = 0;
@@ -388,11 +394,22 @@
             // 
             this.ViewDeptEmpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ViewDeptEmpLabel.AutoSize = true;
-            this.ViewDeptEmpLabel.Location = new System.Drawing.Point(3, 131);
+            this.ViewDeptEmpLabel.Location = new System.Drawing.Point(3, 137);
             this.ViewDeptEmpLabel.Name = "ViewDeptEmpLabel";
             this.ViewDeptEmpLabel.Size = new System.Drawing.Size(142, 13);
             this.ViewDeptEmpLabel.TabIndex = 1;
             this.ViewDeptEmpLabel.Text = "View Department Employees";
+            // 
+            // ViewDepartmentButton
+            // 
+            this.ViewDepartmentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ViewDepartmentButton.Location = new System.Drawing.Point(134, 22);
+            this.ViewDepartmentButton.Name = "ViewDepartmentButton";
+            this.ViewDepartmentButton.Size = new System.Drawing.Size(117, 35);
+            this.ViewDepartmentButton.TabIndex = 3;
+            this.ViewDepartmentButton.Text = "View Departments";
+            this.ViewDepartmentButton.UseVisualStyleBackColor = true;
+            this.ViewDepartmentButton.Click += new System.EventHandler(this.ViewDepartmentButton_Click);
             // 
             // ViewDeptEmpTableContainer
             // 
@@ -402,11 +419,11 @@
             this.ViewDeptEmpTableContainer.Controls.Add(this.ViewDeptEmpInput, 0, 0);
             this.ViewDeptEmpTableContainer.Controls.Add(this.ViewDeptEmpButton, 1, 0);
             this.ViewDeptEmpTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewDeptEmpTableContainer.Location = new System.Drawing.Point(3, 147);
+            this.ViewDeptEmpTableContainer.Location = new System.Drawing.Point(3, 153);
             this.ViewDeptEmpTableContainer.Name = "ViewDeptEmpTableContainer";
             this.ViewDeptEmpTableContainer.RowCount = 1;
             this.ViewDeptEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ViewDeptEmpTableContainer.Size = new System.Drawing.Size(379, 44);
+            this.ViewDeptEmpTableContainer.Size = new System.Drawing.Size(379, 38);
             this.ViewDeptEmpTableContainer.TabIndex = 2;
             // 
             // ViewDeptEmpInput
@@ -414,7 +431,7 @@
             this.ViewDeptEmpInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ViewDeptEmpInput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ViewDeptEmpInput.FormattingEnabled = true;
-            this.ViewDeptEmpInput.Location = new System.Drawing.Point(3, 11);
+            this.ViewDeptEmpInput.Location = new System.Drawing.Point(3, 8);
             this.ViewDeptEmpInput.Name = "ViewDeptEmpInput";
             this.ViewDeptEmpInput.Size = new System.Drawing.Size(291, 21);
             this.ViewDeptEmpInput.TabIndex = 3;
@@ -424,22 +441,32 @@
             this.ViewDeptEmpButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewDeptEmpButton.Location = new System.Drawing.Point(300, 3);
             this.ViewDeptEmpButton.Name = "ViewDeptEmpButton";
-            this.ViewDeptEmpButton.Size = new System.Drawing.Size(76, 38);
+            this.ViewDeptEmpButton.Size = new System.Drawing.Size(76, 32);
             this.ViewDeptEmpButton.TabIndex = 4;
             this.ViewDeptEmpButton.Text = "View";
             this.ViewDeptEmpButton.UseVisualStyleBackColor = true;
             this.ViewDeptEmpButton.Click += new System.EventHandler(this.ViewDeptEmpButton_Click);
             // 
-            // ViewDepartmentButton
+            // label1
             // 
-            this.ViewDepartmentButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ViewDepartmentButton.Location = new System.Drawing.Point(134, 51);
-            this.ViewDepartmentButton.Name = "ViewDepartmentButton";
-            this.ViewDepartmentButton.Size = new System.Drawing.Size(117, 42);
-            this.ViewDepartmentButton.TabIndex = 3;
-            this.ViewDepartmentButton.Text = "View Departments";
-            this.ViewDepartmentButton.UseVisualStyleBackColor = true;
-            this.ViewDepartmentButton.Click += new System.EventHandler(this.ViewDepartmentButton_Click);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "View Jobs";
+            // 
+            // ViewJobsButton
+            // 
+            this.ViewJobsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.ViewJobsButton.Location = new System.Drawing.Point(133, 88);
+            this.ViewJobsButton.Name = "ViewJobsButton";
+            this.ViewJobsButton.Size = new System.Drawing.Size(118, 32);
+            this.ViewJobsButton.TabIndex = 4;
+            this.ViewJobsButton.Text = "View Jobs";
+            this.ViewJobsButton.UseVisualStyleBackColor = true;
+            this.ViewJobsButton.Click += new System.EventHandler(this.ViewJobsButton_Click);
             // 
             // Dashboard
             // 
@@ -499,5 +526,7 @@
         private System.Windows.Forms.Button PayEmpButton;
         private System.Windows.Forms.Label PayDeptLabel;
         private System.Windows.Forms.Label PayEmpLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ViewJobsButton;
     }
 }

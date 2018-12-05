@@ -29,12 +29,12 @@ namespace PayrollMgmt.ChildForms.JobsForms
 
         private void PopulateFields() {
             string queryEmployee = "SELECT JobTitle, Pay, JobDesription"+
-                                  " FROM jobs WHERE JobID = @eid";
+                                  " FROM jobs WHERE JobID = @jid";
 
             database.conn.Open();
             MySqlCommand command = new MySqlCommand(queryEmployee, database.conn);
             command.Prepare();
-            command.Parameters.AddWithValue("@eid", this.ID);
+            command.Parameters.AddWithValue("@jid", this.ID);
             MySqlDataReader ResultReader = command.ExecuteReader();
 
             while (ResultReader.Read())
