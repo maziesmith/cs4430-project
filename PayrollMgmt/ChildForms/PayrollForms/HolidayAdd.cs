@@ -26,7 +26,7 @@ namespace PayrollMgmt.ChildForms.PayrollForms {
             MySqlCommand command = new MySqlCommand(queryHolidayType, database.conn);
             command.Prepare();
             command.Parameters.AddWithValue("@name", this.HolidayName);
-            command.Parameters.AddWithValue("pay", this.HolidayPayment);
+            command.Parameters.AddWithValue("@pay", this.HolidayPayment);
             command.ExecuteNonQuery();
 
             database.conn.Close();

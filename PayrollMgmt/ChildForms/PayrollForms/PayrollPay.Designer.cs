@@ -48,7 +48,7 @@
             this.OvertimePayDataLabel = new System.Windows.Forms.Label();
             this.FinalPayDataLabel = new System.Windows.Forms.Label();
             this.BonusesDataLabel = new System.Windows.Forms.Label();
-            this.SubmitButtom = new System.Windows.Forms.Button();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.MainTableContainer.SuspendLayout();
             this.DataTableContainer.SuspendLayout();
             this.HoursGroup.SuspendLayout();
@@ -135,8 +135,8 @@
             // 
             this.SummaryTableContainer.ColumnCount = 4;
             this.SummaryTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.764784F));
-            this.SummaryTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.98267F));
-            this.SummaryTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.25254F));
+            this.SummaryTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.61947F));
+            this.SummaryTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.84071F));
             this.SummaryTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.SummaryTableContainer.Controls.Add(this.PromptLabel, 1, 0);
             this.SummaryTableContainer.Controls.Add(this.HoursLabel, 1, 2);
@@ -156,7 +156,7 @@
             this.SummaryTableContainer.Controls.Add(this.OvertimePayDataLabel, 2, 10);
             this.SummaryTableContainer.Controls.Add(this.FinalPayDataLabel, 2, 11);
             this.SummaryTableContainer.Controls.Add(this.BonusesDataLabel, 2, 7);
-            this.SummaryTableContainer.Controls.Add(this.SubmitButtom, 1, 12);
+            this.SummaryTableContainer.Controls.Add(this.SubmitButton, 1, 12);
             this.SummaryTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SummaryTableContainer.Location = new System.Drawing.Point(3, 3);
             this.SummaryTableContainer.Name = "SummaryTableContainer";
@@ -166,8 +166,8 @@
             this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
             this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
-            this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
-            this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
+            this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.36036F));
+            this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.954955F));
             this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
             this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
             this.SummaryTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.692307F));
@@ -231,7 +231,7 @@
             // 
             this.PreTotalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.PreTotalLabel.AutoSize = true;
-            this.PreTotalLabel.Location = new System.Drawing.Point(11, 191);
+            this.PreTotalLabel.Location = new System.Drawing.Point(11, 203);
             this.PreTotalLabel.Name = "PreTotalLabel";
             this.PreTotalLabel.Size = new System.Drawing.Size(129, 13);
             this.PreTotalLabel.TabIndex = 5;
@@ -241,7 +241,7 @@
             // 
             this.PreTotalMathLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.PreTotalMathLabel.AutoSize = true;
-            this.PreTotalMathLabel.Location = new System.Drawing.Point(210, 191);
+            this.PreTotalMathLabel.Location = new System.Drawing.Point(210, 203);
             this.PreTotalMathLabel.Name = "PreTotalMathLabel";
             this.PreTotalMathLabel.Size = new System.Drawing.Size(13, 13);
             this.PreTotalMathLabel.TabIndex = 6;
@@ -282,10 +282,10 @@
             // 
             this.FinalPayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.FinalPayLabel.AutoSize = true;
-            this.FinalPayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalPayLabel.Location = new System.Drawing.Point(11, 395);
+            this.FinalPayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FinalPayLabel.Location = new System.Drawing.Point(11, 382);
             this.FinalPayLabel.Name = "FinalPayLabel";
-            this.FinalPayLabel.Size = new System.Drawing.Size(144, 13);
+            this.FinalPayLabel.Size = new System.Drawing.Size(98, 26);
             this.FinalPayLabel.TabIndex = 10;
             this.FinalPayLabel.Text = "Final Paycheck Amount:";
             // 
@@ -359,15 +359,17 @@
             this.BonusesDataLabel.TabIndex = 17;
             this.BonusesDataLabel.Text = "0";
             // 
-            // SubmitButtom
+            // SubmitButton
             // 
-            this.SubmitButtom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SubmitButtom.Location = new System.Drawing.Point(84, 418);
-            this.SubmitButtom.Name = "SubmitButtom";
-            this.SubmitButtom.Size = new System.Drawing.Size(75, 23);
-            this.SubmitButtom.TabIndex = 18;
-            this.SubmitButtom.Text = "Submit Paycheck";
-            this.SubmitButtom.UseVisualStyleBackColor = true;
+            this.SubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SubmitButton.Enabled = false;
+            this.SubmitButton.Location = new System.Drawing.Point(37, 418);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(105, 23);
+            this.SubmitButton.TabIndex = 18;
+            this.SubmitButton.Text = "Pay Employee";
+            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // PayrollPay
             // 
@@ -417,6 +419,6 @@
         private System.Windows.Forms.Label OvertimePayDataLabel;
         private System.Windows.Forms.Label FinalPayDataLabel;
         private System.Windows.Forms.Label BonusesDataLabel;
-        private System.Windows.Forms.Button SubmitButtom;
+        private System.Windows.Forms.Button SubmitButton;
     }
 }
