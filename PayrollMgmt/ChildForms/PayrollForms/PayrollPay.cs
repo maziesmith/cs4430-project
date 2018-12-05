@@ -20,6 +20,7 @@ namespace PayrollMgmt.ChildForms.PayrollForms {
         double overtimeHours = 0;
         double overtimePay = 0;
         double preCalcTotal = 0;
+        double finalCalcTotal = 0;
 
         public PayrollPay(int ID) {
             InitializeComponent();
@@ -68,6 +69,8 @@ namespace PayrollMgmt.ChildForms.PayrollForms {
             ResultsReader.Close();
 
             database.conn.Close();
+
+            this.calculatedAdjustment = (totalBonuses - totalDeductions) * 1/100;
         }
 
         private DataTable PopulateDataTable() {
@@ -102,12 +105,16 @@ namespace PayrollMgmt.ChildForms.PayrollForms {
                     this.preCalcTotal = (((double)SelectedRow.Cells["TotalHours"].Value) * employeePay);
                 }
 
+                this.finalCalcTotal = this.preCalcTotal * (1.00 + calculatedAdjustment);
+
                 HourDataLabel.Text = ((double)SelectedRow.Cells["TotalHours"].Value).ToString() + "/hrs";
                 PreTotalMathLabel.Text = ((double)SelectedRow.Cells["TotalHours"].Value).ToString() + "/hrs\n X $" + employeePay.ToString() + "/hr ";
                 PreTotalDataLabel.Text = "$" + this.preCalcTotal;
 
                 OvertimeHoursDataLabel.Text = this.overtimeHours.ToString() + "/hrs";
                 OvertimePayDataLabel.Text = "$" + this.overtimePay.ToString();
+
+                FinalPayDataLabel.Text = "$"  + string.Format("{0:N2}", (Math.Truncate(finalCalcTotal * 100) / 100).ToString());
             } else {
                 PromptLabel.Visible = true;
             }
