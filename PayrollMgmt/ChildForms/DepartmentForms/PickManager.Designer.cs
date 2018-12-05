@@ -43,11 +43,9 @@
             this.managerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.managerList.Size = new System.Drawing.Size(419, 313);
             this.managerList.TabIndex = 0;
-            this.managerList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.managerList_CellContentClick);
             // 
             // selectManager
             // 
-            this.selectManager.Enabled = false;
             this.selectManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.selectManager.Location = new System.Drawing.Point(158, 331);
             this.selectManager.Name = "selectManager";
@@ -62,6 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 388);
+            this.ControlBox = false;
             this.Controls.Add(this.selectManager);
             this.Controls.Add(this.managerList);
             this.Name = "PickManager";

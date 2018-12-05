@@ -51,7 +51,6 @@
             this.dManager.Size = new System.Drawing.Size(158, 22);
             this.dManager.TabIndex = 17;
             this.dManager.TabStop = false;
-            this.dManager.TextChanged += new System.EventHandler(this.dManager_TextChanged);
             // 
             // label5
             // 
@@ -73,7 +72,6 @@
             this.dDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dDescription.Size = new System.Drawing.Size(158, 40);
             this.dDescription.TabIndex = 2;
-            this.dDescription.TextChanged += new System.EventHandler(this.dDescription_TextChanged);
             // 
             // label4
             // 
@@ -93,7 +91,6 @@
             this.dLocation.Name = "dLocation";
             this.dLocation.Size = new System.Drawing.Size(158, 22);
             this.dLocation.TabIndex = 3;
-            this.dLocation.TextChanged += new System.EventHandler(this.dLocation_TextChanged);
             // 
             // label3
             // 
@@ -113,7 +110,6 @@
             this.dName.Name = "dName";
             this.dName.Size = new System.Drawing.Size(124, 22);
             this.dName.TabIndex = 1;
-            this.dName.TextChanged += new System.EventHandler(this.dName_TextChanged);
             // 
             // label1
             // 
@@ -152,6 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.createDepartment);
             this.Controls.Add(this.selectManager);
             this.Controls.Add(this.dManager);

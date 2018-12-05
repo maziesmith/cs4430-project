@@ -3,6 +3,7 @@ using PayrollMgmt.ChildForms;
 using PayrollMgmt.ChildForms.DepartmentForms;
 using PayrollMgmt.ChildForms.EmployeeForms;
 using PayrollMgmt.ChildForms.PayrollForms;
+using PayrollMgmt.ChildForms.JobsForms;
 using PayrollMgmt.Utils;
 using System;
 using System.Collections.Generic;

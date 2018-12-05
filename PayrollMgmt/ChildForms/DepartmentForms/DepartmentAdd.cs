@@ -24,28 +24,6 @@ namespace PayrollMgmt.ChildForms.DepartmentForms
 
         }
 
-        
-
-        private void dName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dLocation_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dManager_TextChanged(object sender, EventArgs e)
-        {
-
-            
-        }
 
         private void selectManager_Click(object sender, EventArgs e)
         {

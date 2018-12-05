@@ -9,29 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace PayrollMgmt.ChildForms.DepartmentForms
+namespace PayrollMgmt.ChildForms.JobsForms
 {
-    public partial class PickManager : Form
+    public partial class PickDepartment : Form
     {
         PayrollDatabase database;
-        public string managerfirstname { get; set; }
-        public string managerlastname { get; set; }
-        public int managerid { get; set; }
+        public string departmentName { get; set; }
+        public int departmentID { get; set; }
 
-        public PickManager()
+        public PickDepartment()
         {
-            InitializeComponent();
             
+            InitializeComponent();
 
             this.database = PayrollDatabase.Instance;
 
-            managerList.DataSource = populateTable();
+            departmentList.DataSource = populateTable();
         }
-
-
         private DataTable populateTable()
         {
-            string queryTime = "SELECT FirstName,Lastname,EmployeeID FROM employees;";
+            string queryTime = "SELECT DepartmentName,DepartmentID FROM departments;";
 
             DataTable ResultTable = new DataTable();
             MySqlCommand command = new MySqlCommand(queryTime, database.conn);
@@ -48,12 +45,13 @@ namespace PayrollMgmt.ChildForms.DepartmentForms
 
         }
 
-        private void selectManager_Click(object sender, EventArgs e)
+    
+        private void selectDepartment_Click(object sender, EventArgs e)
         {
-            managerfirstname = managerList.CurrentRow.Cells[0].Value.ToString();
-            managerlastname = managerList.CurrentRow.Cells[1].Value.ToString();
-            managerid = Convert.ToInt32(managerList.CurrentRow.Cells[2].Value.ToString());
+            departmentName = departmentList.CurrentRow.Cells[0].Value.ToString();
+            departmentID = Convert.ToInt32(departmentList.CurrentRow.Cells[1].Value.ToString());
             this.Hide();
         }
+
     }
 }
