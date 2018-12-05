@@ -42,15 +42,47 @@ namespace PayrollMgmt.ChildForms.JobsForms
                 JobTitleInput.Text = ResultReader.GetString(0);
                 PayInput.Value = Convert.ToDecimal(ResultReader.GetString(1));
                 JobDescInput.Text = ResultReader.GetString(2);
-
             }
 
             database.conn.Close();
         }
 
-        private void PayTableContainer_Paint(object sender, PaintEventArgs e)
+        private void EnableEditButton_Click(object sender, EventArgs e)
         {
+            editStatus = !editStatus;
 
+            JobTitleInput.Enabled = editStatus;
+            PayInput.Enabled = editStatus;
+            JobDescInput.Enabled = editStatus;
+            UpdateButton.Enabled = editStatus;
+
+            EnableEditButton.Text = (editStatus) ? "Disable Editing" : "Enable Editing";
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            string queryEmployee = "UPDATE jobs SET JobTitle = @jtitle, Pay = @jpay, " +
+                "JobDesription = @jdesc WHERE JobId = @jid";
+
+            database.conn.Open();
+            MySqlCommand command = new MySqlCommand(queryEmployee, database.conn);
+            command.Prepare();
+            command.Parameters.AddWithValue("@jtitle", JobTitleInput.Text);
+            command.Parameters.AddWithValue("@jpay", PayInput.Text);
+            command.Parameters.AddWithValue("@jdesc", JobDescInput.Text);
+            command.Parameters.AddWithValue("@jid", this.ID);
+
+            command.ExecuteNonQuery();
+
+            database.conn.Close();
+
+            JobDetails detailsJob = new JobDetails(this.ID)
+            {
+                MdiParent = this.MdiParent,
+                WindowState = FormWindowState.Maximized
+            };
+            detailsJob.Show();
+            this.Close();
         }
     }
 }
