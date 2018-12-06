@@ -212,5 +212,27 @@ namespace PayrollMgmt {
                 MessageBox.Show("Deduction Added!", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } 
         }
+
+        private void AddDepartmentButton_Click(object sender, EventArgs e)
+        {
+            DepartmentAdd departmentAdd = new DepartmentAdd()
+            {
+                MdiParent = this.dashParent,
+                WindowState = FormWindowState.Maximized
+            };
+            departmentAdd.Show();
+            this.Close();
+        }
+
+        private void AddJobButton_Click(object sender, EventArgs e)
+        {
+            JobAdd jobAdd = new JobAdd()
+            {
+                MdiParent = this.dashParent,
+                WindowState = FormWindowState.Maximized
+            };
+            jobAdd.Show();
+            this.Close();
+        }
     }
 }
