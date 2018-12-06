@@ -57,6 +57,12 @@
     <Compile Include="ChildForms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\DepartmentAdd.Designer.cs">
+      <DependentUpon>DepartmentAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\DepartmentForms\DepartmentDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="ChildForms\DepartmentForms\DepartmentView.Designer.cs">
       <DependentUpon>DepartmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\PickManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\DepartmentForms\PickManager.Designer.cs">
+      <DependentUpon>PickManager.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\EmployeeForms\EmployeeAdd.cs">
       <SubType>Form</SubType>
@@ -99,6 +111,33 @@
     <Compile Include="ChildForms\EmployeeForms\EmployeeTime.Designer.cs">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\JobsForms\JobAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\JobAdd.Designer.cs">
+      <DependentUpon>JobAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\JobDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\JobDetails.Designer.cs">
+      <DependentUpon>JobDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\JobView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\JobView.Designer.cs">
+      <DependentUpon>JobView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\pickDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\JobsForms\pickDepartment.Designer.cs">
+      <DependentUpon>pickDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\PayrollForms\BonusAdd.cs" />
+    <Compile Include="ChildForms\PayrollForms\DeductionAdd.cs" />
+    <Compile Include="ChildForms\PayrollForms\HolidayAdd.cs" />
     <Compile Include="ChildForms\PayrollForms\PayrollPay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +157,9 @@
     <EmbeddedResource Include="ChildForms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DepartmentForms\DepartmentAdd.resx">
+      <DependentUpon>DepartmentAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\DepartmentForms\DepartmentDetails.resx">
       <DependentUpon>DepartmentDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\DepartmentForms\DepartmentView.resx">
       <DependentUpon>DepartmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\DepartmentForms\PickManager.resx">
+      <DependentUpon>PickManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeAdd.resx">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>
@@ -138,6 +183,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\EmployeeForms\EmployeeTime.resx">
       <DependentUpon>EmployeeTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\JobsForms\JobAdd.resx">
+      <DependentUpon>JobAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\JobsForms\JobDetails.resx">
+      <DependentUpon>JobDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\JobsForms\JobView.resx">
+      <DependentUpon>JobView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\JobsForms\pickDepartment.resx">
+      <DependentUpon>pickDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\PayrollForms\PayrollPay.resx">
       <DependentUpon>PayrollPay.cs</DependentUpon>
