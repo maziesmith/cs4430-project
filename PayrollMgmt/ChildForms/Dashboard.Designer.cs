@@ -96,13 +96,12 @@
             // 
             // MainTable
             // 
-            this.MainTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.MainTable.ColumnCount = 1;
             this.MainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.MainTable.Controls.Add(this.PayrollGroup, 0, 1);
             this.MainTable.Controls.Add(this.TopTableContainer, 0, 0);
+            this.MainTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTable.Location = new System.Drawing.Point(0, 0);
             this.MainTable.Name = "MainTable";
             this.MainTable.RowCount = 2;
