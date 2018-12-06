@@ -26,9 +26,17 @@ namespace PayrollMgmt.ChildForms.JobsForms
         {
             string jobName = jName.Text;
             string jobDesc = jDescription.Text;
-            double jobPay = Convert.ToDouble(jPay.Text);
+            double jobPay = 0;
+            try
+            {
+                jobPay = Convert.ToDouble(jPay.Text);
+            }
+            catch (Exception ex) {
+                MessageBox.Show("Error, Please Enter a Number Value for Pay");
+                return;
+            }
             int departmentID = this.departmentId;
-            if (jobName == null || jobDesc == null || departmentID == 0)
+            if ((string.IsNullOrWhiteSpace(jobName )) || (string.IsNullOrWhiteSpace(jobDesc)) || departmentID == 0)
             {
                 Console.WriteLine("Error Null Value");
                 MessageBox.Show("Error Null Value");
@@ -37,10 +45,11 @@ namespace PayrollMgmt.ChildForms.JobsForms
             {
                 string queryTime = "INSERT INTO jobs (JobTitle, Pay, DepartmentID, JobDesription)" +
                                     "VALUES ('" + jobName + "'," + jobPay + "," + departmentID + ",'" + jobDesc + "');";
+                MySqlCommand command = new MySqlCommand(queryTime, database.conn);
 
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(queryTime, database.conn);
+                   
                     command.Connection.Open();
                     command.ExecuteNonQuery();
                     command.Connection.Close();
@@ -56,6 +65,7 @@ namespace PayrollMgmt.ChildForms.JobsForms
                 {
                     Console.WriteLine("Error");
                     MessageBox.Show("Database Error, Please Contact Admin");
+                    command.Connection.Close();
                 }
 
             }
