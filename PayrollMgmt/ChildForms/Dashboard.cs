@@ -186,6 +186,31 @@ namespace PayrollMgmt {
             }
         }
 
-        
+        private void BonusButton_Click(object sender, EventArgs e) {
+            if (!string.IsNullOrWhiteSpace(BonusNameInput.Text) && BonusAmountInput.Value != 0){
+                BonusAdd addBonus = new BonusAdd(BonusNameInput.Text, (double)BonusAmountInput.Value);
+                BonusNameInput.Text = "";
+                BonusAmountInput.Value = 0;
+                MessageBox.Show("Bonus Added!", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void AddHolidayButton_Click(object sender, EventArgs e) {
+            if (!string.IsNullOrWhiteSpace(HolidayNameInput.Text) && HolidayPayInput.Value != 0) {
+                HolidayAdd addBonus = new HolidayAdd(HolidayNameInput.Text, (double)HolidayPayInput.Value);
+                HolidayNameInput.Text = "";
+                HolidayPayInput.Value = 0;
+                MessageBox.Show("Holiday Added!", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void AddDeductionButton_Click(object sender, EventArgs e) {
+            if (!string.IsNullOrWhiteSpace(DeductionInput.Text) && DeductionAmountInput.Value != 0) {
+                DeductionAdd addBonus = new DeductionAdd(DeductionInput.Text, (double)DeductionAmountInput.Value);
+                DeductionInput.Text = "";
+                DeductionAmountInput.Value = 0;
+                MessageBox.Show("Deduction Added!", "Inserted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } 
+        }
     }
 }

@@ -138,7 +138,7 @@ namespace PayrollMgmt.ChildForms {
 
         private void AddEmployeeBonuses(int generatedKey) {
             database.conn.Open();
-            string queryBonuses = "INSERT INTO bonues (EmployeeID, BonusType) VALUES (@eid, @type)";
+            string queryBonuses = "INSERT INTO bonuses (EmployeeID, BonusType) VALUES (@eid, @type)";
 
             MySqlCommand command = new MySqlCommand(queryBonuses, database.conn);
             command.Prepare();

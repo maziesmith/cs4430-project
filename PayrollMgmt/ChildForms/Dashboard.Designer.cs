@@ -26,13 +26,34 @@
             this.MainTable = new System.Windows.Forms.TableLayoutPanel();
             this.PayrollGroup = new System.Windows.Forms.GroupBox();
             this.PayrollTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.DeductionLabel = new System.Windows.Forms.Label();
+            this.AddDeductionButton = new System.Windows.Forms.Button();
+            this.DeductionInputLabel = new System.Windows.Forms.Label();
+            this.DeductionAmountLabel = new System.Windows.Forms.Label();
+            this.DeductionInput = new System.Windows.Forms.TextBox();
+            this.DeductionAmountInput = new System.Windows.Forms.NumericUpDown();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.HolidayLabel = new System.Windows.Forms.Label();
+            this.AddHolidayButton = new System.Windows.Forms.Button();
+            this.HolidayInputLabel = new System.Windows.Forms.Label();
+            this.HolidayPayLabel = new System.Windows.Forms.Label();
+            this.HolidayNameInput = new System.Windows.Forms.TextBox();
+            this.HolidayPayInput = new System.Windows.Forms.NumericUpDown();
             this.PayEmpTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.PayEmployeeLabel = new System.Windows.Forms.Label();
             this.PayDeptInput = new System.Windows.Forms.ComboBox();
             this.PayEmpInput = new System.Windows.Forms.ComboBox();
             this.PayEmpButton = new System.Windows.Forms.Button();
             this.PayDeptLabel = new System.Windows.Forms.Label();
-            this.PayEmpLabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.BonusTableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.BonusLabel = new System.Windows.Forms.Label();
+            this.BonusButton = new System.Windows.Forms.Button();
+            this.BonusNameLabel = new System.Windows.Forms.Label();
+            this.BonusAmountLabel = new System.Windows.Forms.Label();
+            this.BonusNameInput = new System.Windows.Forms.TextBox();
+            this.BonusAmountInput = new System.Windows.Forms.NumericUpDown();
             this.TopTableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.EmployeeGroup = new System.Windows.Forms.GroupBox();
             this.EmployeeTableContainer = new System.Windows.Forms.TableLayoutPanel();
@@ -58,7 +79,13 @@
             this.MainTable.SuspendLayout();
             this.PayrollGroup.SuspendLayout();
             this.PayrollTableContainer.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DeductionAmountInput)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HolidayPayInput)).BeginInit();
             this.PayEmpTableContainer.SuspendLayout();
+            this.BonusTableContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BonusAmountInput)).BeginInit();
             this.TopTableContainer.SuspendLayout();
             this.EmployeeGroup.SuspendLayout();
             this.EmployeeTableContainer.SuspendLayout();
@@ -68,8 +95,8 @@
             this.SuspendLayout();
             // 
             // MainTable
-            //
-            this.MainTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            // 
+            this.MainTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.MainTable.ColumnCount = 1;
             this.MainTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -102,7 +129,10 @@
             this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.PayrollTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.PayrollTableContainer.Controls.Add(this.tableLayoutPanel3, 0, 0);
+            this.PayrollTableContainer.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.PayrollTableContainer.Controls.Add(this.PayEmpTableContainer, 0, 0);
+            this.PayrollTableContainer.Controls.Add(this.BonusTableContainer, 0, 0);
             this.PayrollTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PayrollTableContainer.Location = new System.Drawing.Point(3, 16);
             this.PayrollTableContainer.Name = "PayrollTableContainer";
@@ -110,6 +140,168 @@
             this.PayrollTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.PayrollTableContainer.Size = new System.Drawing.Size(788, 200);
             this.PayrollTableContainer.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.DeductionLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.AddDeductionButton, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.DeductionInputLabel, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.DeductionAmountLabel, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.DeductionInput, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.DeductionAmountInput, 0, 5);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(397, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 7;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.34021F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.185567F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.247422F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.762887F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97938F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(191, 194);
+            this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // DeductionLabel
+            // 
+            this.DeductionLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DeductionLabel.AutoSize = true;
+            this.DeductionLabel.Location = new System.Drawing.Point(56, 4);
+            this.DeductionLabel.Name = "DeductionLabel";
+            this.DeductionLabel.Size = new System.Drawing.Size(78, 13);
+            this.DeductionLabel.TabIndex = 0;
+            this.DeductionLabel.Text = "Add Deduction";
+            // 
+            // AddDeductionButton
+            // 
+            this.AddDeductionButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddDeductionButton.Location = new System.Drawing.Point(52, 153);
+            this.AddDeductionButton.Name = "AddDeductionButton";
+            this.AddDeductionButton.Size = new System.Drawing.Size(87, 23);
+            this.AddDeductionButton.TabIndex = 3;
+            this.AddDeductionButton.Text = "Add Deduction";
+            this.AddDeductionButton.UseVisualStyleBackColor = true;
+            this.AddDeductionButton.Click += new System.EventHandler(this.AddDeductionButton_Click);
+            // 
+            // DeductionInputLabel
+            // 
+            this.DeductionInputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeductionInputLabel.AutoSize = true;
+            this.DeductionInputLabel.Location = new System.Drawing.Point(3, 37);
+            this.DeductionInputLabel.Name = "DeductionInputLabel";
+            this.DeductionInputLabel.Size = new System.Drawing.Size(87, 13);
+            this.DeductionInputLabel.TabIndex = 4;
+            this.DeductionInputLabel.Text = "Deduction Name";
+            // 
+            // DeductionAmountLabel
+            // 
+            this.DeductionAmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeductionAmountLabel.AutoSize = true;
+            this.DeductionAmountLabel.Location = new System.Drawing.Point(3, 91);
+            this.DeductionAmountLabel.Name = "DeductionAmountLabel";
+            this.DeductionAmountLabel.Size = new System.Drawing.Size(60, 13);
+            this.DeductionAmountLabel.TabIndex = 5;
+            this.DeductionAmountLabel.Text = "Amount (%)";
+            // 
+            // DeductionInput
+            // 
+            this.DeductionInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeductionInput.Location = new System.Drawing.Point(3, 58);
+            this.DeductionInput.Name = "DeductionInput";
+            this.DeductionInput.Size = new System.Drawing.Size(185, 20);
+            this.DeductionInput.TabIndex = 6;
+            // 
+            // DeductionAmountInput
+            // 
+            this.DeductionAmountInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeductionAmountInput.Location = new System.Drawing.Point(3, 109);
+            this.DeductionAmountInput.Name = "DeductionAmountInput";
+            this.DeductionAmountInput.Size = new System.Drawing.Size(185, 20);
+            this.DeductionAmountInput.TabIndex = 8;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.HolidayLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.AddHolidayButton, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.HolidayInputLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.HolidayPayLabel, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.HolidayNameInput, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.HolidayPayInput, 0, 5);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(594, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.34021F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.185567F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.247422F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.762887F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97938F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(191, 194);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // HolidayLabel
+            // 
+            this.HolidayLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HolidayLabel.AutoSize = true;
+            this.HolidayLabel.Location = new System.Drawing.Point(63, 4);
+            this.HolidayLabel.Name = "HolidayLabel";
+            this.HolidayLabel.Size = new System.Drawing.Size(64, 13);
+            this.HolidayLabel.TabIndex = 0;
+            this.HolidayLabel.Text = "Add Holiday";
+            // 
+            // AddHolidayButton
+            // 
+            this.AddHolidayButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddHolidayButton.Location = new System.Drawing.Point(52, 153);
+            this.AddHolidayButton.Name = "AddHolidayButton";
+            this.AddHolidayButton.Size = new System.Drawing.Size(87, 23);
+            this.AddHolidayButton.TabIndex = 3;
+            this.AddHolidayButton.Text = "Pay Employee";
+            this.AddHolidayButton.UseVisualStyleBackColor = true;
+            this.AddHolidayButton.Click += new System.EventHandler(this.AddHolidayButton_Click);
+            // 
+            // HolidayInputLabel
+            // 
+            this.HolidayInputLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.HolidayInputLabel.AutoSize = true;
+            this.HolidayInputLabel.Location = new System.Drawing.Point(3, 37);
+            this.HolidayInputLabel.Name = "HolidayInputLabel";
+            this.HolidayInputLabel.Size = new System.Drawing.Size(73, 13);
+            this.HolidayInputLabel.TabIndex = 4;
+            this.HolidayInputLabel.Text = "Holiday Name";
+            // 
+            // HolidayPayLabel
+            // 
+            this.HolidayPayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.HolidayPayLabel.AutoSize = true;
+            this.HolidayPayLabel.Location = new System.Drawing.Point(3, 91);
+            this.HolidayPayLabel.Name = "HolidayPayLabel";
+            this.HolidayPayLabel.Size = new System.Drawing.Size(25, 13);
+            this.HolidayPayLabel.TabIndex = 5;
+            this.HolidayPayLabel.Text = "Pay";
+            // 
+            // HolidayNameInput
+            // 
+            this.HolidayNameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HolidayNameInput.Location = new System.Drawing.Point(3, 58);
+            this.HolidayNameInput.Name = "HolidayNameInput";
+            this.HolidayNameInput.Size = new System.Drawing.Size(185, 20);
+            this.HolidayNameInput.TabIndex = 6;
+            // 
+            // HolidayPayInput
+            // 
+            this.HolidayPayInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.HolidayPayInput.Location = new System.Drawing.Point(3, 109);
+            this.HolidayPayInput.Name = "HolidayPayInput";
+            this.HolidayPayInput.Size = new System.Drawing.Size(185, 20);
+            this.HolidayPayInput.TabIndex = 8;
             // 
             // PayEmpTableContainer
             // 
@@ -120,7 +312,7 @@
             this.PayEmpTableContainer.Controls.Add(this.PayEmpInput, 0, 5);
             this.PayEmpTableContainer.Controls.Add(this.PayEmpButton, 0, 6);
             this.PayEmpTableContainer.Controls.Add(this.PayDeptLabel, 0, 2);
-            this.PayEmpTableContainer.Controls.Add(this.PayEmpLabel, 0, 4);
+            this.PayEmpTableContainer.Controls.Add(this.label4, 0, 4);
             this.PayEmpTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PayEmpTableContainer.Location = new System.Drawing.Point(3, 3);
             this.PayEmpTableContainer.Name = "PayEmpTableContainer";
@@ -133,7 +325,7 @@
             this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97938F));
             this.PayEmpTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
             this.PayEmpTableContainer.Size = new System.Drawing.Size(191, 194);
-            this.PayEmpTableContainer.TabIndex = 0;
+            this.PayEmpTableContainer.TabIndex = 1;
             // 
             // PayEmployeeLabel
             // 
@@ -187,15 +379,96 @@
             this.PayDeptLabel.TabIndex = 4;
             this.PayDeptLabel.Text = "Department";
             // 
-            // PayEmpLabel
+            // label4
             // 
-            this.PayEmpLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PayEmpLabel.AutoSize = true;
-            this.PayEmpLabel.Location = new System.Drawing.Point(3, 91);
-            this.PayEmpLabel.Name = "PayEmpLabel";
-            this.PayEmpLabel.Size = new System.Drawing.Size(53, 13);
-            this.PayEmpLabel.TabIndex = 5;
-            this.PayEmpLabel.Text = "Employee\r\n";
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Employee\r\n";
+            // 
+            // BonusTableContainer
+            // 
+            this.BonusTableContainer.ColumnCount = 1;
+            this.BonusTableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.BonusTableContainer.Controls.Add(this.BonusLabel, 0, 0);
+            this.BonusTableContainer.Controls.Add(this.BonusButton, 0, 6);
+            this.BonusTableContainer.Controls.Add(this.BonusNameLabel, 0, 2);
+            this.BonusTableContainer.Controls.Add(this.BonusAmountLabel, 0, 4);
+            this.BonusTableContainer.Controls.Add(this.BonusNameInput, 0, 3);
+            this.BonusTableContainer.Controls.Add(this.BonusAmountInput, 0, 5);
+            this.BonusTableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BonusTableContainer.Location = new System.Drawing.Point(200, 3);
+            this.BonusTableContainer.Name = "BonusTableContainer";
+            this.BonusTableContainer.RowCount = 7;
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.34021F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.185567F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.247422F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.762887F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.97938F));
+            this.BonusTableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.89691F));
+            this.BonusTableContainer.Size = new System.Drawing.Size(191, 194);
+            this.BonusTableContainer.TabIndex = 0;
+            // 
+            // BonusLabel
+            // 
+            this.BonusLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BonusLabel.AutoSize = true;
+            this.BonusLabel.Location = new System.Drawing.Point(66, 4);
+            this.BonusLabel.Name = "BonusLabel";
+            this.BonusLabel.Size = new System.Drawing.Size(59, 13);
+            this.BonusLabel.TabIndex = 0;
+            this.BonusLabel.Text = "Add Bonus";
+            // 
+            // BonusButton
+            // 
+            this.BonusButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BonusButton.Location = new System.Drawing.Point(52, 153);
+            this.BonusButton.Name = "BonusButton";
+            this.BonusButton.Size = new System.Drawing.Size(87, 23);
+            this.BonusButton.TabIndex = 3;
+            this.BonusButton.Text = "Add Bonus";
+            this.BonusButton.UseVisualStyleBackColor = true;
+            this.BonusButton.Click += new System.EventHandler(this.BonusButton_Click);
+            // 
+            // BonusNameLabel
+            // 
+            this.BonusNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BonusNameLabel.AutoSize = true;
+            this.BonusNameLabel.Location = new System.Drawing.Point(3, 37);
+            this.BonusNameLabel.Name = "BonusNameLabel";
+            this.BonusNameLabel.Size = new System.Drawing.Size(68, 13);
+            this.BonusNameLabel.TabIndex = 4;
+            this.BonusNameLabel.Text = "Bonus Name";
+            // 
+            // BonusAmountLabel
+            // 
+            this.BonusAmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BonusAmountLabel.AutoSize = true;
+            this.BonusAmountLabel.Location = new System.Drawing.Point(3, 91);
+            this.BonusAmountLabel.Name = "BonusAmountLabel";
+            this.BonusAmountLabel.Size = new System.Drawing.Size(60, 13);
+            this.BonusAmountLabel.TabIndex = 5;
+            this.BonusAmountLabel.Text = "Amount (%)";
+            // 
+            // BonusNameInput
+            // 
+            this.BonusNameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BonusNameInput.Location = new System.Drawing.Point(3, 58);
+            this.BonusNameInput.Name = "BonusNameInput";
+            this.BonusNameInput.Size = new System.Drawing.Size(185, 20);
+            this.BonusNameInput.TabIndex = 6;
+            // 
+            // BonusAmountInput
+            // 
+            this.BonusAmountInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.BonusAmountInput.Location = new System.Drawing.Point(3, 109);
+            this.BonusAmountInput.Name = "BonusAmountInput";
+            this.BonusAmountInput.Size = new System.Drawing.Size(185, 20);
+            this.BonusAmountInput.TabIndex = 7;
             // 
             // TopTableContainer
             // 
@@ -480,8 +753,17 @@
             this.MainTable.ResumeLayout(false);
             this.PayrollGroup.ResumeLayout(false);
             this.PayrollTableContainer.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DeductionAmountInput)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HolidayPayInput)).EndInit();
             this.PayEmpTableContainer.ResumeLayout(false);
             this.PayEmpTableContainer.PerformLayout();
+            this.BonusTableContainer.ResumeLayout(false);
+            this.BonusTableContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BonusAmountInput)).EndInit();
             this.TopTableContainer.ResumeLayout(false);
             this.EmployeeGroup.ResumeLayout(false);
             this.EmployeeTableContainer.ResumeLayout(false);
@@ -519,14 +801,35 @@
         private System.Windows.Forms.Button ViewDeptEmpButton;
         private System.Windows.Forms.Button ViewDepartmentButton;
         private System.Windows.Forms.TableLayoutPanel PayrollTableContainer;
+        private System.Windows.Forms.TableLayoutPanel BonusTableContainer;
+        private System.Windows.Forms.Label BonusLabel;
+        private System.Windows.Forms.Button BonusButton;
+        private System.Windows.Forms.Label BonusNameLabel;
+        private System.Windows.Forms.Label BonusAmountLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ViewJobsButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label DeductionLabel;
+        private System.Windows.Forms.Button AddDeductionButton;
+        private System.Windows.Forms.Label DeductionInputLabel;
+        private System.Windows.Forms.Label DeductionAmountLabel;
+        private System.Windows.Forms.TextBox DeductionInput;
+        private System.Windows.Forms.NumericUpDown DeductionAmountInput;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label HolidayLabel;
+        private System.Windows.Forms.Button AddHolidayButton;
+        private System.Windows.Forms.Label HolidayInputLabel;
+        private System.Windows.Forms.Label HolidayPayLabel;
+        private System.Windows.Forms.TextBox HolidayNameInput;
+        private System.Windows.Forms.NumericUpDown HolidayPayInput;
         private System.Windows.Forms.TableLayoutPanel PayEmpTableContainer;
         private System.Windows.Forms.Label PayEmployeeLabel;
         private System.Windows.Forms.ComboBox PayDeptInput;
         private System.Windows.Forms.ComboBox PayEmpInput;
         private System.Windows.Forms.Button PayEmpButton;
         private System.Windows.Forms.Label PayDeptLabel;
-        private System.Windows.Forms.Label PayEmpLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ViewJobsButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox BonusNameInput;
+        private System.Windows.Forms.NumericUpDown BonusAmountInput;
     }
 }
