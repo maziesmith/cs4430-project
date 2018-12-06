@@ -49,7 +49,7 @@ namespace PayrollMgmt.ChildForms.DepartmentForms
             string departmentDesc = dDescription.Text;
             string departmentLoc = dLocation.Text;
             int managerId = this.managerID;
-            if (departmentName == null || departmentDesc == null || departmentLoc == null || managerID == 0)
+            if ((string.IsNullOrWhiteSpace(departmentName)) || (string.IsNullOrWhiteSpace(departmentDesc)) || (string.IsNullOrWhiteSpace(departmentLoc)) || managerID == 0)
             {
                 Console.WriteLine("Error Null Value");
                 MessageBox.Show("Error Null Value");
@@ -58,9 +58,10 @@ namespace PayrollMgmt.ChildForms.DepartmentForms
                 string queryTime = "INSERT INTO departments (DepartmentName,Description,Location,ManagerID)" +
                                     "VALUES ('"+ departmentName +"','"+ departmentDesc +"','"+ departmentLoc +"',"+ managerId + ");";
 
+                MySqlCommand command = new MySqlCommand(queryTime, database.conn);
                 try
                 {
-                    MySqlCommand command = new MySqlCommand(queryTime, database.conn);
+                   
                     command.Connection.Open();
                     command.ExecuteNonQuery();
                     command.Connection.Close();
@@ -75,6 +76,7 @@ namespace PayrollMgmt.ChildForms.DepartmentForms
                 catch (Exception ex) {
                     Console.WriteLine("Error");
                     MessageBox.Show("Database Error, Please Contact Admin");
+                    command.Connection.Close();
                 }
 
             }
